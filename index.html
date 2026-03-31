@@ -1,204 +1,476 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy - Habit Flow</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: #f8f9ff;
-      color: #222;
-      line-height: 1.7;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HabitNode — Privacy Policy</title>
+<meta name="description" content="Privacy Policy for HabitNode - Habit Tracker App">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, sans-serif;
+    background: #f8f9ff;
+    color: #1e293b;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+  .header {
+    background: linear-gradient(135deg, #6C63FF, #4338CA, #1a1055);
+    padding: 60px 20px 50px;
+    text-align: center;
+    color: white;
+  }
+  .header-icon { font-size: 50px; margin-bottom: 12px; }
+  .header h1 { font-size: 32px; font-weight: 900; letter-spacing: 0.5px; margin-bottom: 8px; }
+  .header p { font-size: 16px; opacity: 0.85; font-weight: 500; }
+  .header .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 15px;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  .container {
+    max-width: 820px;
+    margin: -30px auto 40px;
+    padding: 0 20px;
+  }
+  .card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 36px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1e293b;
+    margin: 30px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #6C63FF;
+    display: inline-block;
+  }
+  h2:first-of-type { margin-top: 0; }
+  h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #334155;
+    margin: 20px 0 8px;
+  }
+  p { font-size: 15px; color: #475569; margin-bottom: 12px; }
+  ul {
+    margin: 8px 0 16px 24px;
+    color: #475569;
+    font-size: 15px;
+  }
+  ul li { margin-bottom: 6px; }
+  .highlight {
+    background: #f0f4ff;
+    border-left: 4px solid #6C63FF;
+    padding: 14px 18px;
+    border-radius: 0 12px 12px 0;
+    margin: 16px 0;
+    font-size: 14px;
+    color: #4338CA;
+    font-weight: 600;
+  }
+  .warning {
+    background: #fef3c7;
+    border-left: 4px solid #f59e0b;
+    padding: 14px 18px;
+    border-radius: 0 12px 12px 0;
+    margin: 16px 0;
+    font-size: 14px;
+    color: #92400e;
+    font-weight: 600;
+  }
+  .table-wrap {
+    overflow-x: auto;
+    margin: 16px 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  th {
+    background: #f1f5f9;
+    padding: 12px 14px;
+    text-align: left;
+    font-weight: 700;
+    color: #334155;
+    border-bottom: 2px solid #e2e8f0;
+  }
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #f1f5f9;
+    color: #475569;
+  }
+  .footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: #94a3b8;
+    font-size: 13px;
+  }
+  .footer a { color: #6C63FF; text-decoration: none; font-weight: 600; }
+  a { color: #6C63FF; }
+  strong { color: #1e293b; }
 
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      background: #ffffff;
-      padding: 40px 24px;
-      border-radius: 20px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-    }
-
-    h1, h2, h3 {
-      color: #6C63FF;
-      margin-top: 28px;
-    }
-
-    h1 {
-      text-align: center;
-      margin-top: 0;
-      font-size: 32px;
-    }
-
-    p {
-      margin: 12px 0;
-    }
-
-    ul {
-      padding-left: 22px;
-    }
-
-    a {
-      color: #6C63FF;
-      text-decoration: none;
-    }
-
-    .muted {
-      text-align: center;
-      color: #666;
-      margin-bottom: 24px;
-    }
-
-    .footer {
-      margin-top: 40px;
-      font-size: 14px;
-      color: #666;
-      border-top: 1px solid #eee;
-      padding-top: 20px;
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        margin: 16px;
-        padding: 24px 16px;
-      }
-
-      h1 {
-        font-size: 26px;
-      }
-    }
-  </style>
+  @media (max-width: 600px) {
+    .card { padding: 24px 20px; }
+    .header h1 { font-size: 26px; }
+    h2 { font-size: 19px; }
+  }
+</style>
 </head>
 <body>
-  <div class="container">
-    <h1>Privacy Policy</h1>
-    <p class="muted">Last updated: March 2026</p>
 
-    <p>
-      Habit Flow (“we”, “our”, or “us”) respects your privacy. This Privacy Policy explains how
-      information is handled when you use the Habit Flow mobile application.
-    </p>
+<!-- HEADER -->
+<div class="header">
+  <div class="header-icon">🔒</div>
+  <h1>Privacy Policy</h1>
+  <p>HabitNode — Habit Tracker App</p>
+  <div class="badge">Last Updated: January 15, 2025</div>
+</div>
 
-    <h2>1. Information We Collect</h2>
-    <p>Habit Flow may collect or process the following types of information:</p>
-    <ul>
-      <li><strong>Habit Data:</strong> habits, streaks, reminders, progress, categories, colors, and related app content created by you.</li>
-      <li><strong>Device Information:</strong> limited technical information such as device type, OS version, crash data, and app performance data.</li>
-      <li><strong>Purchase Information:</strong> subscription or premium purchase status through Google Play or Apple App Store.</li>
-      <li><strong>Advertising Data:</strong> if ads are enabled, third-party ad providers such as Google AdMob may collect advertising-related identifiers and interaction data.</li>
-      <li><strong>Notification Preferences:</strong> reminder settings and scheduled notification preferences.</li>
-      <li><strong>Backup Files:</strong> if you export a backup, your selected habit data may be saved as a JSON file on your device or shared by you manually.</li>
-    </ul>
+<!-- CONTENT -->
+<div class="container">
+<div class="card">
 
-    <h2>2. How Your Data Is Used</h2>
-    <p>Your information may be used to:</p>
-    <ul>
-      <li>Provide habit tracking and reminder features</li>
-      <li>Save your progress and streaks locally</li>
-      <li>Restore your purchased premium status</li>
-      <li>Display advertisements (if applicable)</li>
-      <li>Improve app performance and user experience</li>
-      <li>Generate analytics and statistics inside the app</li>
-    </ul>
+<p>This Privacy Policy describes how <strong>HabitNode</strong> ("the App", "we", "us", "our"), developed by <strong>VHIR</strong>, collects, uses, and protects your information when you use our mobile application available on the Google Play Store.</p>
 
-    <h2>3. Local Storage</h2>
-    <p>
-      Habit Flow primarily stores your habit data locally on your device using local storage technology
-      such as Hive. This means your personal habit entries are generally not uploaded to our servers
-      unless you manually export or share them.
-    </p>
+<p>By downloading, installing, or using HabitNode, you agree to this Privacy Policy. If you do not agree, please do not use the App.</p>
 
-    <h2>4. Backup and Restore</h2>
-    <p>
-      Habit Flow may allow you to export your data as a JSON backup file. That file is controlled by you.
-      If you share or upload the file, you are responsible for where it is sent and stored.
-    </p>
+<div class="highlight">
+  🔐 <strong>Key Point:</strong> HabitNode stores ALL your data locally on your device. We do NOT collect, transmit, or store any personal data on external servers.
+</div>
 
-    <h2>5. Third-Party Services</h2>
-    <p>Habit Flow may use third-party services including but not limited to:</p>
-    <ul>
-      <li>Google AdMob (for ads)</li>
-      <li>Google Play Billing / Apple In-App Purchases (for subscriptions and premium access)</li>
-      <li>Firebase / crash or analytics tools (if enabled in future versions)</li>
-      <li>Device notification services</li>
-    </ul>
+<!-- 1 -->
+<h2>1. Information We Collect</h2>
 
-    <p>
-      These third-party services may collect information according to their own privacy policies.
-    </p>
+<h3>1.1 Information You Provide</h3>
+<p>When using HabitNode, you may provide the following information, which is stored <strong>locally on your device only</strong>:</p>
+<ul>
+  <li><strong>Profile Information:</strong> Display name and avatar emoji (optional, stored locally)</li>
+  <li><strong>Habit Data:</strong> Habit names, descriptions, categories, schedules, goals, priorities, notes, and completion records</li>
+  <li><strong>Missed Habit Reasons:</strong> When you miss a habit, you may optionally provide a reason (stored locally for smart reminders)</li>
+  <li><strong>Achievement Data:</strong> Badges earned, XP points, level progress, streaks</li>
+  <li><strong>App Preferences:</strong> Theme mode, notification settings, sound settings, alarm configurations</li>
+</ul>
 
-    <h2>6. Advertising</h2>
-    <p>
-      If ads are shown in the app, ad providers may collect certain device identifiers, approximate location,
-      ad interaction data, and other technical data to deliver and improve advertising.
-    </p>
+<h3>1.2 Information Collected Automatically</h3>
+<p>The App itself does <strong>NOT</strong> collect any personal information automatically. However, the following third-party services integrated in the App may collect certain data:</p>
 
-    <h2>7. In-App Purchases</h2>
-    <p>
-      Premium purchases and subscriptions are handled by official app stores such as Google Play or Apple App Store.
-      We do not directly collect or store your payment card information.
-    </p>
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th>Service</th>
+      <th>Provider</th>
+      <th>Purpose</th>
+      <th>Data Collected</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Google AdMob</td>
+      <td>Google LLC</td>
+      <td>Display banner advertisements</td>
+      <td>Advertising ID, device info, IP address (anonymized)</td>
+    </tr>
+    <tr>
+      <td>Unity Ads</td>
+      <td>Unity Technologies</td>
+      <td>Display interstitial & rewarded advertisements</td>
+      <td>Advertising ID, device info, ad interaction data</td>
+    </tr>
+    <tr>
+      <td>Google Play Billing</td>
+      <td>Google LLC</td>
+      <td>Process in-app purchases (Pro subscription)</td>
+      <td>Purchase transaction data (handled by Google)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
-    <h2>8. Notifications</h2>
-    <p>
-      Habit Flow may request notification permissions in order to send habit reminders, summaries, or related alerts.
-      You can disable notifications from your device settings or from within the app if available.
-    </p>
+<h3>1.3 Information We Do NOT Collect</h3>
+<p>We do <strong>NOT</strong> collect:</p>
+<ul>
+  <li>Your real name, email address, phone number, or any personal contact information</li>
+  <li>Location data or GPS coordinates</li>
+  <li>Camera or microphone data</li>
+  <li>Contacts, call logs, or SMS messages</li>
+  <li>Browsing history or search queries</li>
+  <li>Biometric data (fingerprints, face recognition)</li>
+  <li>Financial information or payment card details (handled entirely by Google Play)</li>
+  <li>Health or fitness data from device sensors</li>
+</ul>
 
-    <h2>9. Data Sharing</h2>
-    <p>
-      We do not sell your personal habit data. We may share limited technical information with third-party
-      providers only when necessary to operate app functionality such as ads, purchases, or app performance tools.
-    </p>
+<!-- 2 -->
+<h2>2. How We Use Information</h2>
 
-    <h2>10. Data Security</h2>
-    <p>
-      We take reasonable steps to protect your information. However, no storage method or transmission
-      method is 100% secure, and we cannot guarantee absolute security.
-    </p>
+<p>All habit data you create is used <strong>exclusively on your device</strong> for the following purposes:</p>
+<ul>
+  <li><strong>Habit Tracking:</strong> To display, manage, and track your daily habits and routines</li>
+  <li><strong>Notifications & Alarms:</strong> To send you scheduled reminders and full-screen alarms for your habits</li>
+  <li><strong>Smart Reminders:</strong> To generate personalized reminder messages based on your missed habit reasons (processed locally, never sent to any server)</li>
+  <li><strong>Statistics:</strong> To calculate and display your completion rates, streaks, and progress charts</li>
+  <li><strong>Badge & XP System:</strong> To track your achievements, award badges, calculate experience points, and determine your level</li>
+  <li><strong>Text-to-Speech:</strong> To speak habit names and alarm descriptions aloud using your device's built-in TTS engine</li>
+  <li><strong>Sound Effects:</strong> To play audio feedback for habit completions, badge unlocks, and other app interactions</li>
+  <li><strong>Backup & Restore:</strong> To allow you to export and import your data as JSON files stored on your device</li>
+  <li><strong>Advertising:</strong> To display relevant advertisements (free users only) through Google AdMob and Unity Ads</li>
+  <li><strong>In-App Purchases:</strong> To process Pro subscription purchases through Google Play Billing</li>
+</ul>
 
-    <h2>11. Children’s Privacy</h2>
-    <p>
-      Habit Flow is not specifically directed to children under the age of 13. If you believe a child has
-      provided personal information through the app, please contact us so we can review the issue.
-    </p>
+<div class="highlight">
+  💡 <strong>Smart Reminders:</strong> When you provide a reason for missing a habit, the app generates a personalized notification message locally on your device. This data is NEVER transmitted to any external server or AI service.
+</div>
 
-    <h2>12. Your Choices</h2>
-    <ul>
-      <li>You may delete habits and local data from inside the app</li>
-      <li>You may uninstall the app to remove locally stored data</li>
-      <li>You may disable notifications from device settings</li>
-      <li>You may choose not to purchase premium features</li>
-      <li>You may choose whether or not to export/share backups</li>
-    </ul>
+<!-- 3 -->
+<h2>3. Data Storage & Security</h2>
 
-    <h2>13. International Users</h2>
-    <p>
-      If you use the app outside your country, you understand that information may be processed
-      according to applicable platform or third-party provider systems.
-    </p>
+<h3>3.1 Local Storage</h3>
+<p>All app data is stored locally on your device using <strong>Hive</strong>, a lightweight, encrypted-capable local database. Data is organized in three separate storage containers:</p>
+<ul>
+  <li><strong>Habits Box:</strong> All habit data, completion records, missed reasons, and progress</li>
+  <li><strong>Settings Box:</strong> App preferences, theme, notification settings, purchase status</li>
+  <li><strong>Badges Box:</strong> Achievement data, XP points, badge unlock records, usage statistics</li>
+</ul>
 
-    <h2>14. Changes to This Privacy Policy</h2>
-    <p>
-      We may update this Privacy Policy from time to time. Any changes will be posted on this page
-      with an updated revision date.
-    </p>
+<h3>3.2 No Cloud Storage</h3>
+<p>HabitNode does <strong>NOT</strong> use any cloud services, remote databases, or external servers to store your data. We do not use Firebase, AWS, or any other cloud platform for data storage.</p>
 
-    <h2>15. Contact Us</h2>
-    <p>
-      If you have any questions about this Privacy Policy, you may contact us at:
-    </p>
-    <p>
-      <strong>Email:</strong> vrapp24@gmail.com
-    </p>
+<h3>3.3 Data Security</h3>
+<p>Your data is as secure as your device itself. We recommend:</p>
+<ul>
+  <li>Using a screen lock (PIN, pattern, fingerprint, or face unlock) on your device</li>
+  <li>Keeping your device's operating system updated</li>
+  <li>Regularly backing up your habit data using the in-app backup feature</li>
+</ul>
 
-    <div class="footer">
-      <p>Habit Flow - Privacy Policy</p>
-    </div>
-  </div>
+<h3>3.4 Backup Files</h3>
+<p>When you use the backup feature, your data is exported as a JSON file to your device's storage. This file contains your habits, settings, and achievement data. You are solely responsible for the security of exported backup files.</p>
+
+<!-- 4 -->
+<h2>4. Third-Party Services</h2>
+
+<p>HabitNode integrates the following third-party services. Each has its own privacy policy:</p>
+
+<h3>4.1 Google AdMob</h3>
+<p>We use Google AdMob to display banner advertisements to free users. Google AdMob may collect device identifiers and usage data for ad personalization.</p>
+<p>📄 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></p>
+<p>📄 <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">How Google Uses Data</a></p>
+
+<h3>4.2 Unity Ads</h3>
+<p>We use Unity Ads to display interstitial and rewarded video advertisements to free users. Unity Ads may collect device information for ad targeting.</p>
+<p>📄 <a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">Unity Privacy Policy</a></p>
+
+<h3>4.3 Google Play Billing</h3>
+<p>In-app purchases (Pro subscription) are processed entirely through Google Play Billing. We do not collect or store any payment information. All payment processing is handled by Google.</p>
+<p>📄 <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice" target="_blank" rel="noopener">Google Payments Privacy Notice</a></p>
+
+<h3>4.4 Google Fonts</h3>
+<p>The App uses the Poppins font from Google Fonts. Font files may be downloaded from Google's servers on first use.</p>
+<p>📄 <a href="https://developers.google.com/fonts/faq/privacy" target="_blank" rel="noopener">Google Fonts Privacy</a></p>
+
+<!-- 5 -->
+<h2>5. Permissions</h2>
+
+<p>HabitNode requests the following Android permissions. Each permission is used for a specific, legitimate purpose:</p>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th>Permission</th>
+      <th>Purpose</th>
+      <th>Required?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>INTERNET</strong></td>
+      <td>Load advertisements and process in-app purchases</td>
+      <td>Yes (for ads & purchases)</td>
+    </tr>
+    <tr>
+      <td><strong>ACCESS_NETWORK_STATE</strong></td>
+      <td>Check internet connectivity for ads</td>
+      <td>Yes (for ads)</td>
+    </tr>
+    <tr>
+      <td><strong>POST_NOTIFICATIONS</strong></td>
+      <td>Send habit reminders, smart reminders, and daily summaries</td>
+      <td>Optional (user grants)</td>
+    </tr>
+    <tr>
+      <td><strong>SCHEDULE_EXACT_ALARM / USE_EXACT_ALARM</strong></td>
+      <td>Schedule precise habit reminders and alarms</td>
+      <td>Optional (for reminders)</td>
+    </tr>
+    <tr>
+      <td><strong>USE_FULL_SCREEN_INTENT</strong></td>
+      <td>Display full-screen alarm when phone is locked</td>
+      <td>Optional (for alarms)</td>
+    </tr>
+    <tr>
+      <td><strong>VIBRATE</strong></td>
+      <td>Vibrate device for alarm notifications</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td><strong>WAKE_LOCK</strong></td>
+      <td>Keep screen on during alarm display</td>
+      <td>Yes (for alarms)</td>
+    </tr>
+    <tr>
+      <td><strong>RECEIVE_BOOT_COMPLETED</strong></td>
+      <td>Reschedule notifications after device restart</td>
+      <td>Yes (for reminders)</td>
+    </tr>
+    <tr>
+      <td><strong>FOREGROUND_SERVICE</strong></td>
+      <td>Ensure alarm sounds play reliably</td>
+      <td>Yes (for alarms)</td>
+    </tr>
+    <tr>
+      <td><strong>READ_EXTERNAL_STORAGE / READ_MEDIA_AUDIO</strong></td>
+      <td>Allow user to select custom alarm sounds from device</td>
+      <td>Optional (user grants)</td>
+    </tr>
+    <tr>
+      <td><strong>BILLING</strong></td>
+      <td>Process in-app purchases through Google Play</td>
+      <td>Yes (for Pro subscription)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="highlight">
+  🔐 <strong>No Sensitive Permissions:</strong> HabitNode does NOT request access to your camera, microphone, contacts, location, call logs, SMS, or any other sensitive personal data.
+</div>
+
+<!-- 6 -->
+<h2>6. Advertising</h2>
+
+<p>HabitNode displays advertisements to free users through Google AdMob (banner ads) and Unity Ads (interstitial and rewarded video ads).</p>
+
+<h3>6.1 Ad Personalization</h3>
+<p>Ad networks may use your device's Advertising ID and other non-personal information to show relevant advertisements. You can opt out of personalized advertising:</p>
+<ul>
+  <li><strong>Android:</strong> Settings → Google → Ads → Opt out of Ads Personalization</li>
+  <li><strong>In-App:</strong> Upgrade to Pro to remove all advertisements</li>
+</ul>
+
+<h3>6.2 Ad Frequency</h3>
+<p>We implement responsible ad practices:</p>
+<ul>
+  <li>Interstitial ads are shown with reasonable frequency limits</li>
+  <li>Rewarded ads are shown only when the user voluntarily chooses to watch them</li>
+  <li>Banner ads are displayed at the bottom of the main screen</li>
+  <li>Pro subscribers see zero advertisements</li>
+</ul>
+
+<!-- 7 -->
+<h2>7. In-App Purchases</h2>
+
+<p>HabitNode offers optional Pro subscriptions:</p>
+<ul>
+  <li><strong>Monthly Plan:</strong> ₹49/month</li>
+  <li><strong>Yearly Plan:</strong> ₹399/year</li>
+</ul>
+
+<p>All purchases are processed through <strong>Google Play Billing</strong>. We do not collect, store, or have access to your payment card details, bank information, or Google account credentials. Subscription management (cancellation, refunds) is handled through the Google Play Store.</p>
+
+<!-- 8 -->
+<h2>8. Children's Privacy</h2>
+
+<p>HabitNode is <strong>not directed at children under 13</strong> years of age. We do not knowingly collect personal information from children under 13. The App does not contain content inappropriate for general audiences, but it is designed for users aged 13 and above.</p>
+
+<p>If you are a parent or guardian and believe your child has provided personal information through the App, please contact us and we will assist you.</p>
+
+<!-- 9 -->
+<h2>9. Data Retention & Deletion</h2>
+
+<h3>9.1 Retention</h3>
+<p>All data is stored locally on your device for as long as the App is installed. We do not retain any data on external servers.</p>
+
+<h3>9.2 Deletion</h3>
+<p>You can delete your data at any time:</p>
+<ul>
+  <li><strong>Individual Habits:</strong> Delete specific habits from within the App</li>
+  <li><strong>All Data:</strong> Use the "Reset All Data" option in Settings</li>
+  <li><strong>Complete Removal:</strong> Uninstalling the App removes ALL locally stored data permanently</li>
+</ul>
+
+<div class="warning">
+  ⚠️ <strong>Warning:</strong> Uninstalling HabitNode will permanently delete all your habits, badges, streaks, and settings. Use the backup feature to save your data before uninstalling.
+</div>
+
+<!-- 10 -->
+<h2>10. Data Sharing</h2>
+
+<p>We do <strong>NOT</strong> sell, trade, rent, or share your personal data with any third parties.</p>
+<p>The only data that leaves your device is:</p>
+<ul>
+  <li>Anonymous advertising data sent to Google AdMob and Unity Ads (for ad serving)</li>
+  <li>Purchase transaction data sent to Google Play (for subscription processing)</li>
+  <li>Backup files that you manually export and choose to share</li>
+</ul>
+
+<!-- 11 -->
+<h2>11. Your Rights</h2>
+
+<p>As a user, you have the right to:</p>
+<ul>
+  <li><strong>Access:</strong> View all your data within the App at any time</li>
+  <li><strong>Export:</strong> Use the backup feature to export all your data as a JSON file</li>
+  <li><strong>Delete:</strong> Delete individual habits or all data at any time</li>
+  <li><strong>Opt-out of Ads:</strong> Upgrade to Pro or adjust your device's ad personalization settings</li>
+  <li><strong>Control Notifications:</strong> Enable or disable notifications from within the App or through your device settings</li>
+  <li><strong>Control Permissions:</strong> Grant or revoke any permission through your device settings</li>
+</ul>
+
+<!-- 12 -->
+<h2>12. Changes to This Policy</h2>
+
+<p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated "Last Updated" date. We encourage you to review this Privacy Policy periodically.</p>
+
+<p>Significant changes will be notified through the App or this page. Continued use of the App after changes constitutes acceptance of the updated Privacy Policy.</p>
+
+<!-- 13 -->
+<h2>13. Contact Us</h2>
+
+<p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us:</p>
+
+<ul>
+  <li><strong>Developer:</strong> VHIR</li>
+  <li><strong>Email:</strong> <a href="mailto:vhirsupport@gmail.com">vhirsupport@gmail.com</a></li>
+  <li><strong>Website:</strong> <a href="https://vrapp24.blogspot.com/" target="_blank" rel="noopener">vrapp24.blogspot.com</a></li>
+  <li><strong>App:</strong> <a href="https://play.google.com/store/apps/details?id=com.habit.node" target="_blank" rel="noopener">HabitNode on Google Play</a></li>
+</ul>
+
+<p>We will respond to your inquiry within <strong>7 business days</strong>.</p>
+
+</div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>© 2025 <strong>HabitNode</strong> by VHIR. All rights reserved.</p>
+  <p style="margin-top: 8px;">
+    <a href="https://play.google.com/store/apps/details?id=com.habit.node" target="_blank" rel="noopener">Download App</a> &nbsp;|&nbsp;
+    <a href="https://vhir-apps.github.io/habit-node-terms_and_conditions/" target="_blank" rel="noopener">Terms & Conditions</a> &nbsp;|&nbsp;
+    <a href="mailto:vhirsupport@gmail.com">Contact</a>
+  </p>
+</div>
+
 </body>
 </html>
