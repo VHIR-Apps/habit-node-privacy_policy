@@ -88,6 +88,16 @@
     color: #92400e;
     font-weight: 600;
   }
+  .success {
+    background: #d1fae5;
+    border-left: 4px solid #00C853;
+    padding: 14px 18px;
+    border-radius: 0 12px 12px 0;
+    margin: 16px 0;
+    font-size: 14px;
+    color: #065f46;
+    font-weight: 600;
+  }
   .table-wrap {
     overflow-x: auto;
     margin: 16px 0;
@@ -134,7 +144,7 @@
   <div class="header-icon">🔒</div>
   <h1>Privacy Policy</h1>
   <p>HabitNode — Habit Tracker App</p>
-  <div class="badge">Last Updated: January 15, 2025</div>
+  <div class="badge">Last Updated: January 19, 2025</div>
 </div>
 
 <!-- CONTENT -->
@@ -146,23 +156,49 @@
 <p>By downloading, installing, or using HabitNode, you agree to this Privacy Policy. If you do not agree, please do not use the App.</p>
 
 <div class="highlight">
-  🔐 <strong>Key Point:</strong> HabitNode stores ALL your data locally on your device. We do NOT collect, transmit, or store any personal data on external servers.
+  🔐 <strong>Privacy-First Design:</strong> HabitNode stores most of your data locally on your device. Cloud features (Leaderboard, Google Drive Backup) are OPTIONAL and require your explicit consent.
 </div>
 
 <!-- 1 -->
 <h2>1. Information We Collect</h2>
 
-<h3>1.1 Information You Provide</h3>
+<h3>1.1 Information You Provide (Stored Locally)</h3>
 <p>When using HabitNode, you may provide the following information, which is stored <strong>locally on your device only</strong>:</p>
 <ul>
   <li><strong>Profile Information:</strong> Display name and avatar emoji (optional, stored locally)</li>
   <li><strong>Habit Data:</strong> Habit names, descriptions, categories, schedules, goals, priorities, notes, and completion records</li>
+  <li><strong>Study Sessions & Routines:</strong> Pomodoro timer data, study routine schedules, session history</li>
+  <li><strong>Notes:</strong> Personal notes with title, content, tags, and timestamps</li>
   <li><strong>Missed Habit Reasons:</strong> When you miss a habit, you may optionally provide a reason (stored locally for smart reminders)</li>
   <li><strong>Achievement Data:</strong> Badges earned, XP points, level progress, streaks</li>
   <li><strong>App Preferences:</strong> Theme mode, notification settings, sound settings, alarm configurations</li>
 </ul>
 
-<h3>1.2 Information Collected Automatically</h3>
+<h3>1.2 Information Stored in Cloud (Optional, User-Initiated)</h3>
+<p>The following features are <strong>100% OPTIONAL</strong> and require your explicit action:</p>
+
+<h4>📊 Leaderboard Feature (Optional, Opt-In)</h4>
+<p>If you choose to join the global leaderboard by tapping "Join Leaderboard" in Settings, the following data is stored in <strong>Google Cloud Firestore</strong>:</p>
+<ul>
+  <li><strong>Display Name:</strong> Your chosen username (visible to other users)</li>
+  <li><strong>Avatar Emoji:</strong> Your profile emoji (visible to other users)</li>
+  <li><strong>Total Score:</strong> Your total XP points</li>
+  <li><strong>Level:</strong> Your current level</li>
+  <li><strong>Total Habits:</strong> Number of habits you've created</li>
+  <li><strong>Account UID:</strong> Your Firebase Authentication user ID (not visible to others)</li>
+  <li><strong>Country Code:</strong> Your country (if available from Google Sign-In)</li>
+  <li><strong>Opt-In Status:</strong> Whether you're currently participating in the leaderboard</li>
+  <li><strong>Timestamps:</strong> When you joined and last updated your profile</li>
+</ul>
+
+<div class="success">
+  ✅ <strong>You Control Leaderboard Data:</strong> You can opt-out or delete your cloud profile anytime from Settings → Leaderboard → Opt Out or Delete Profile.
+</div>
+
+<h4>☁️ Google Drive Backup (Optional, User-Initiated)</h4>
+<p>If you choose to enable Google Drive backup in Settings, your habit data (habits, routines, notes, settings) is encrypted and uploaded to your <strong>private Google Drive app folder</strong>. Only you can access this data. We do not have access to your Google Drive files.</p>
+
+<h3>1.3 Information Collected Automatically</h3>
 <p>The App itself does <strong>NOT</strong> collect any personal information automatically. However, the following third-party services integrated in the App may collect certain data:</p>
 
 <div class="table-wrap">
@@ -189,6 +225,24 @@
       <td>Advertising ID, device info, ad interaction data</td>
     </tr>
     <tr>
+      <td>Firebase Authentication</td>
+      <td>Google LLC</td>
+      <td>Secure Google Sign-In for leaderboard (optional)</td>
+      <td>Google account email, profile name, photo URL, UID</td>
+    </tr>
+    <tr>
+      <td>Cloud Firestore</td>
+      <td>Google LLC</td>
+      <td>Store leaderboard profiles (optional, opt-in only)</td>
+      <td>Username, avatar, score, level, country, timestamps</td>
+    </tr>
+    <tr>
+      <td>Google Drive API</td>
+      <td>Google LLC</td>
+      <td>Backup & restore habit data (optional, user-initiated)</td>
+      <td>Encrypted backup files in your private app folder</td>
+    </tr>
+    <tr>
       <td>Google Play Billing</td>
       <td>Google LLC</td>
       <td>Process in-app purchases (Pro subscription)</td>
@@ -198,89 +252,184 @@
 </table>
 </div>
 
-<h3>1.3 Information We Do NOT Collect</h3>
+<h3>1.4 Information We Do NOT Collect</h3>
 <p>We do <strong>NOT</strong> collect:</p>
 <ul>
-  <li>Your real name, email address, phone number, or any personal contact information</li>
-  <li>Location data or GPS coordinates</li>
+  <li>Your phone number or physical address</li>
+  <li>Precise location data or GPS coordinates</li>
   <li>Camera or microphone data</li>
   <li>Contacts, call logs, or SMS messages</li>
   <li>Browsing history or search queries</li>
   <li>Biometric data (fingerprints, face recognition)</li>
   <li>Financial information or payment card details (handled entirely by Google Play)</li>
   <li>Health or fitness data from device sensors</li>
+  <li>Device IMEI or serial numbers</li>
 </ul>
 
 <!-- 2 -->
 <h2>2. How We Use Information</h2>
 
-<p>All habit data you create is used <strong>exclusively on your device</strong> for the following purposes:</p>
+<h3>2.1 Local Data Usage (No Internet Required)</h3>
+<p>Data stored locally on your device is used for:</p>
 <ul>
   <li><strong>Habit Tracking:</strong> To display, manage, and track your daily habits and routines</li>
   <li><strong>Notifications & Alarms:</strong> To send you scheduled reminders and full-screen alarms for your habits</li>
   <li><strong>Smart Reminders:</strong> To generate personalized reminder messages based on your missed habit reasons (processed locally, never sent to any server)</li>
   <li><strong>Statistics:</strong> To calculate and display your completion rates, streaks, and progress charts</li>
   <li><strong>Badge & XP System:</strong> To track your achievements, award badges, calculate experience points, and determine your level</li>
+  <li><strong>Study Mode:</strong> To track Pomodoro timer sessions, study routines, and productivity analytics</li>
+  <li><strong>Notes:</strong> To create, edit, search, and organize your personal notes</li>
   <li><strong>Text-to-Speech:</strong> To speak habit names and alarm descriptions aloud using your device's built-in TTS engine</li>
   <li><strong>Sound Effects:</strong> To play audio feedback for habit completions, badge unlocks, and other app interactions</li>
-  <li><strong>Backup & Restore:</strong> To allow you to export and import your data as JSON files stored on your device</li>
+</ul>
+
+<h3>2.2 Cloud Data Usage (Optional Features Only)</h3>
+<p>If you opt-in to cloud features:</p>
+<ul>
+  <li><strong>Leaderboard:</strong> Your username, avatar, and score are displayed in the global leaderboard ranking. Other users can see your public profile (username, avatar, level, score) but NOT your habits or personal data.</li>
+  <li><strong>Google Drive Backup:</strong> Your encrypted backup file is uploaded to your private Google Drive folder for restore purposes. We cannot access your Google Drive data.</li>
+</ul>
+
+<h3>2.3 Third-Party Service Usage</h3>
+<ul>
   <li><strong>Advertising:</strong> To display relevant advertisements (free users only) through Google AdMob and Unity Ads</li>
   <li><strong>In-App Purchases:</strong> To process Pro subscription purchases through Google Play Billing</li>
+  <li><strong>Authentication:</strong> To securely sign you in with Google for leaderboard access (optional)</li>
 </ul>
 
 <div class="highlight">
-  💡 <strong>Smart Reminders:</strong> When you provide a reason for missing a habit, the app generates a personalized notification message locally on your device. This data is NEVER transmitted to any external server or AI service.
+  💡 <strong>Smart Reminders:</strong> When you provide a reason for missing a habit, the app generates a personalized notification message locally on your device using simple text templates. This feature does NOT use AI, machine learning, or send your data to any external server.
 </div>
 
 <!-- 3 -->
 <h2>3. Data Storage & Security</h2>
 
-<h3>3.1 Local Storage</h3>
-<p>All app data is stored locally on your device using <strong>Hive</strong>, a lightweight, encrypted-capable local database. Data is organized in three separate storage containers:</p>
+<h3>3.1 Local Storage (Primary Data Storage)</h3>
+<p>All core app data is stored locally on your device using <strong>Hive</strong>, a lightweight, secure local database. Data is organized in separate storage containers (boxes):</p>
 <ul>
   <li><strong>Habits Box:</strong> All habit data, completion records, missed reasons, and progress</li>
+  <li><strong>Study Sessions Box:</strong> Pomodoro timer data, study routines, session history</li>
+  <li><strong>Notes Box:</strong> All your personal notes with metadata</li>
   <li><strong>Settings Box:</strong> App preferences, theme, notification settings, purchase status</li>
   <li><strong>Badges Box:</strong> Achievement data, XP points, badge unlock records, usage statistics</li>
 </ul>
 
-<h3>3.2 No Cloud Storage</h3>
-<p>HabitNode does <strong>NOT</strong> use any cloud services, remote databases, or external servers to store your data. We do not use Firebase, AWS, or any other cloud platform for data storage.</p>
+<h3>3.2 Cloud Storage (Optional, User-Controlled)</h3>
+<p><strong>Google Cloud Firestore</strong> (Leaderboard Only):</p>
+<ul>
+  <li>Used ONLY if you opt-in to the leaderboard feature</li>
+  <li>Stores only your public profile data (username, avatar, score, level, country)</li>
+  <li>Secured with Firestore Security Rules that ensure you can only modify your own profile</li>
+  <li>Indexed for efficient leaderboard queries (ordered by score and update time)</li>
+  <li>You can delete your cloud profile anytime from Settings</li>
+</ul>
 
-<h3>3.3 Data Security</h3>
+<p><strong>Google Drive</strong> (Backup Only):</p>
+<ul>
+  <li>Used ONLY if you manually initiate a backup from Settings</li>
+  <li>Files are stored in your private app folder (appDataFolder scope)</li>
+  <li>We do NOT have access to your Google Drive files or other app data</li>
+  <li>You control backup and restore through Google Drive settings</li>
+</ul>
+
+<h3>3.3 Data Security Measures</h3>
+<p>We implement industry-standard security practices:</p>
+<ul>
+  <li><strong>Local Encryption:</strong> Sensitive data is encrypted using Hive's built-in encryption</li>
+  <li><strong>Secure Authentication:</strong> Firebase Authentication with Google OAuth 2.0</li>
+  <li><strong>Firestore Rules:</strong> User data is protected by server-side security rules</li>
+  <li><strong>HTTPS Only:</strong> All network requests use encrypted HTTPS connections</li>
+  <li><strong>No Plain Text Passwords:</strong> We never store or transmit passwords (Google handles authentication)</li>
+</ul>
+
 <p>Your data is as secure as your device itself. We recommend:</p>
 <ul>
   <li>Using a screen lock (PIN, pattern, fingerprint, or face unlock) on your device</li>
   <li>Keeping your device's operating system updated</li>
+  <li>Not rooting or jailbreaking your device</li>
   <li>Regularly backing up your habit data using the in-app backup feature</li>
 </ul>
 
 <h3>3.4 Backup Files</h3>
-<p>When you use the backup feature, your data is exported as a JSON file to your device's storage. This file contains your habits, settings, and achievement data. You are solely responsible for the security of exported backup files.</p>
+<p>When you use the local backup feature, your data is exported as a JSON file to your device's storage. When you use Google Drive backup, an encrypted backup is uploaded to your private Google Drive folder. You are solely responsible for the security of exported backup files.</p>
 
 <!-- 4 -->
-<h2>4. Third-Party Services</h2>
+<h2>4. User-Generated Content (UGC)</h2>
+
+<p>HabitNode includes a <strong>Global Leaderboard</strong> feature where users can share their progress publicly. This is considered <strong>User-Generated Content (UGC)</strong> under Google Play policies.</p>
+
+<h3>4.1 What is Shared Publicly</h3>
+<p>If you opt-in to the leaderboard, other users can see:</p>
+<ul>
+  <li>Your display name (username)</li>
+  <li>Your avatar emoji</li>
+  <li>Your total XP score</li>
+  <li>Your level</li>
+  <li>Your country (if available from Google Sign-In)</li>
+  <li>Number of habits you've created</li>
+</ul>
+
+<h3>4.2 What is NOT Shared Publicly</h3>
+<ul>
+  <li>Your actual habits (names, descriptions, schedules)</li>
+  <li>Your completion records or missed habit reasons</li>
+  <li>Your email address or Google account information</li>
+  <li>Your notes or study session data</li>
+  <li>Your device information or IP address</li>
+</ul>
+
+<h3>4.3 Moderation & Safety Features</h3>
+<p>To ensure a safe community, we provide:</p>
+<ul>
+  <li><strong>Report User:</strong> Report inappropriate usernames or behavior</li>
+  <li><strong>Block User:</strong> Hide specific users from your leaderboard view</li>
+  <li><strong>Opt-Out Anytime:</strong> Remove yourself from the public leaderboard instantly</li>
+  <li><strong>Delete Profile:</strong> Permanently delete your cloud profile and all associated data</li>
+</ul>
+
+<div class="warning">
+  ⚠️ <strong>Leaderboard Guidelines:</strong> Usernames must not contain offensive, hateful, or inappropriate content. Violating this policy may result in profile removal. Choose your display name responsibly.
+</div>
+
+<h3>4.4 Age Restriction for UGC</h3>
+<p>The leaderboard feature is available only to users aged <strong>13 and above</strong>. We do not knowingly collect or display UGC from children under 13.</p>
+
+<!-- 5 -->
+<h2>5. Third-Party Services</h2>
 
 <p>HabitNode integrates the following third-party services. Each has its own privacy policy:</p>
 
-<h3>4.1 Google AdMob</h3>
+<h3>5.1 Google AdMob</h3>
 <p>We use Google AdMob to display banner advertisements to free users. Google AdMob may collect device identifiers and usage data for ad personalization.</p>
 <p>📄 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></p>
 <p>📄 <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">How Google Uses Data</a></p>
 
-<h3>4.2 Unity Ads</h3>
+<h3>5.2 Unity Ads</h3>
 <p>We use Unity Ads to display interstitial and rewarded video advertisements to free users. Unity Ads may collect device information for ad targeting.</p>
 <p>📄 <a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">Unity Privacy Policy</a></p>
 
-<h3>4.3 Google Play Billing</h3>
+<h3>5.3 Firebase Authentication</h3>
+<p>We use Firebase Authentication to securely sign you in with your Google account (optional, for leaderboard feature only). Firebase collects your Google account email, profile name, and photo URL.</p>
+<p>📄 <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy & Security</a></p>
+
+<h3>5.4 Cloud Firestore</h3>
+<p>We use Google Cloud Firestore to store leaderboard profiles (optional, opt-in only). Firestore is a secure, scalable NoSQL cloud database provided by Google.</p>
+<p>📄 <a href="https://cloud.google.com/firestore/docs/security" target="_blank" rel="noopener">Firestore Security</a></p>
+
+<h3>5.5 Google Drive API</h3>
+<p>We use Google Drive API to enable optional cloud backup of your habit data. Backups are stored in your private Google Drive app folder (appDataFolder scope). We do NOT access your other Google Drive files.</p>
+<p>📄 <a href="https://developers.google.com/drive/api/guides/about-sdk" target="_blank" rel="noopener">Google Drive API</a></p>
+
+<h3>5.6 Google Play Billing</h3>
 <p>In-app purchases (Pro subscription) are processed entirely through Google Play Billing. We do not collect or store any payment information. All payment processing is handled by Google.</p>
 <p>📄 <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice" target="_blank" rel="noopener">Google Payments Privacy Notice</a></p>
 
-<h3>4.4 Google Fonts</h3>
+<h3>5.7 Google Fonts</h3>
 <p>The App uses the Poppins font from Google Fonts. Font files may be downloaded from Google's servers on first use.</p>
 <p>📄 <a href="https://developers.google.com/fonts/faq/privacy" target="_blank" rel="noopener">Google Fonts Privacy</a></p>
 
-<!-- 5 -->
-<h2>5. Permissions</h2>
+<!-- 6 -->
+<h2>6. Permissions</h2>
 
 <p>HabitNode requests the following Android permissions. Each permission is used for a specific, legitimate purpose:</p>
 
@@ -296,13 +445,13 @@
   <tbody>
     <tr>
       <td><strong>INTERNET</strong></td>
-      <td>Load advertisements and process in-app purchases</td>
-      <td>Yes (for ads & purchases)</td>
+      <td>Load advertisements, sync leaderboard, Google Drive backup, process in-app purchases</td>
+      <td>Yes (for ads, cloud features, purchases)</td>
     </tr>
     <tr>
       <td><strong>ACCESS_NETWORK_STATE</strong></td>
-      <td>Check internet connectivity for ads</td>
-      <td>Yes (for ads)</td>
+      <td>Check internet connectivity for ads and cloud features</td>
+      <td>Yes (for ads & cloud)</td>
     </tr>
     <tr>
       <td><strong>POST_NOTIFICATIONS</strong></td>
@@ -354,32 +503,35 @@
 </div>
 
 <div class="highlight">
-  🔐 <strong>No Sensitive Permissions:</strong> HabitNode does NOT request access to your camera, microphone, contacts, location, call logs, SMS, or any other sensitive personal data.
+  🔐 <strong>No Sensitive Permissions:</strong> HabitNode does NOT request access to your camera, microphone, contacts, location, call logs, SMS, calendar, or any other sensitive personal data.
 </div>
 
-<!-- 6 -->
-<h2>6. Advertising</h2>
+<!-- 7 -->
+<h2>7. Advertising</h2>
 
 <p>HabitNode displays advertisements to free users through Google AdMob (banner ads) and Unity Ads (interstitial and rewarded video ads).</p>
 
-<h3>6.1 Ad Personalization</h3>
+<h3>7.1 Ad Personalization</h3>
 <p>Ad networks may use your device's Advertising ID and other non-personal information to show relevant advertisements. You can opt out of personalized advertising:</p>
 <ul>
   <li><strong>Android:</strong> Settings → Google → Ads → Opt out of Ads Personalization</li>
   <li><strong>In-App:</strong> Upgrade to Pro to remove all advertisements</li>
 </ul>
 
-<h3>6.2 Ad Frequency</h3>
+<h3>7.2 Ad Frequency</h3>
 <p>We implement responsible ad practices:</p>
 <ul>
-  <li>Interstitial ads are shown with reasonable frequency limits</li>
+  <li>Interstitial ads are shown with reasonable frequency limits (max once per session)</li>
   <li>Rewarded ads are shown only when the user voluntarily chooses to watch them</li>
   <li>Banner ads are displayed at the bottom of the main screen</li>
   <li>Pro subscribers see zero advertisements</li>
 </ul>
 
-<!-- 7 -->
-<h2>7. In-App Purchases</h2>
+<h3>7.3 Children's Advertising</h3>
+<p>We comply with COPPA (Children's Online Privacy Protection Act) and do not show personalized ads to users under 13.</p>
+
+<!-- 8 -->
+<h2>8. In-App Purchases</h2>
 
 <p>HabitNode offers optional Pro subscriptions:</p>
 <ul>
@@ -389,75 +541,340 @@
 
 <p>All purchases are processed through <strong>Google Play Billing</strong>. We do not collect, store, or have access to your payment card details, bank information, or Google account credentials. Subscription management (cancellation, refunds) is handled through the Google Play Store.</p>
 
-<!-- 8 -->
-<h2>8. Children's Privacy</h2>
-
-<p>HabitNode is <strong>not directed at children under 13</strong> years of age. We do not knowingly collect personal information from children under 13. The App does not contain content inappropriate for general audiences, but it is designed for users aged 13 and above.</p>
-
-<p>If you are a parent or guardian and believe your child has provided personal information through the App, please contact us and we will assist you.</p>
+<p>Pro features include:</p>
+<ul>
+  <li>Ad-free experience</li>
+  <li>Unlimited habits</li>
+  <li>Advanced statistics and charts</li>
+  <li>Priority customer support</li>
+  <li>Exclusive badges and themes</li>
+</ul>
 
 <!-- 9 -->
-<h2>9. Data Retention & Deletion</h2>
+<h2>9. Children's Privacy</h2>
 
-<h3>9.1 Retention</h3>
-<p>All data is stored locally on your device for as long as the App is installed. We do not retain any data on external servers.</p>
+<p>HabitNode is rated for users aged <strong>13 and above</strong>. We do not knowingly collect personal information from children under 13 years of age.</p>
 
-<h3>9.2 Deletion</h3>
-<p>You can delete your data at any time:</p>
+<p>If you are a parent or guardian and believe your child under 13 has provided personal information through the App (especially through the leaderboard feature), please contact us immediately at <a href="mailto:vhirsupport@gmail.com">vhirsupport@gmail.com</a> and we will delete the data within 48 hours.</p>
+
+<h3>9.1 Age Verification for Cloud Features</h3>
 <ul>
-  <li><strong>Individual Habits:</strong> Delete specific habits from within the App</li>
-  <li><strong>All Data:</strong> Use the "Reset All Data" option in Settings</li>
-  <li><strong>Complete Removal:</strong> Uninstalling the App removes ALL locally stored data permanently</li>
+  <li>Leaderboard feature requires Google Sign-In, which has a minimum age requirement of 13</li>
+  <li>We do not independently verify age but rely on Google's age verification during account creation</li>
+  <li>If we discover a user under 13 on the leaderboard, we will immediately remove their profile</li>
 </ul>
-
-<div class="warning">
-  ⚠️ <strong>Warning:</strong> Uninstalling HabitNode will permanently delete all your habits, badges, streaks, and settings. Use the backup feature to save your data before uninstalling.
-</div>
 
 <!-- 10 -->
-<h2>10. Data Sharing</h2>
+<h2>10. Data Retention & Deletion</h2>
 
-<p>We do <strong>NOT</strong> sell, trade, rent, or share your personal data with any third parties.</p>
-<p>The only data that leaves your device is:</p>
+<h3>10.1 Local Data Retention</h3>
+<p>Data stored locally on your device is retained for as long as the App is installed. We do not automatically delete or expire local data.</p>
+
+<h3>10.2 Cloud Data Retention</h3>
 <ul>
-  <li>Anonymous advertising data sent to Google AdMob and Unity Ads (for ad serving)</li>
-  <li>Purchase transaction data sent to Google Play (for subscription processing)</li>
-  <li>Backup files that you manually export and choose to share</li>
+  <li><strong>Leaderboard Profiles:</strong> Stored in Firestore until you opt-out or delete your profile</li>
+  <li><strong>Google Drive Backups:</strong> Stored in your Google Drive until you manually delete them</li>
+  <li><strong>Inactive Profiles:</strong> Leaderboard profiles inactive for more than 365 days may be automatically archived (you can restore by logging in again)</li>
 </ul>
+
+<h3>10.3 Data Deletion Options</h3>
+<p>You can delete your data at any time:</p>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th>What to Delete</th>
+      <th>How to Delete</th>
+      <th>Effect</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Individual Habit</td>
+      <td>Long-press habit → Delete</td>
+      <td>Removes one habit and its history (local only)</td>
+    </tr>
+    <tr>
+      <td>All Local Data</td>
+      <td>Settings → Reset All Data</td>
+      <td>Deletes all habits, notes, badges, settings (local only)</td>
+    </tr>
+    <tr>
+      <td>Leaderboard Profile</td>
+      <td>Settings → Leaderboard → Delete Profile</td>
+      <td>Permanently deletes your cloud profile from Firestore</td>
+    </tr>
+    <tr>
+      <td>Google Drive Backup</td>
+      <td>Google Drive app → App Data → Delete files</td>
+      <td>Removes backup files from your Google Drive</td>
+    </tr>
+    <tr>
+      <td>Google Account Data</td>
+      <td>Settings → Leaderboard → Sign Out</td>
+      <td>Disconnects Google account (does not delete cloud profile)</td>
+    </tr>
+    <tr>
+      <td>Everything (Complete Removal)</td>
+      <td>Uninstall the App</td>
+      <td>Deletes ALL local data (cloud data remains unless manually deleted)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="warning">
+  ⚠️ <strong>Important:</strong> Uninstalling HabitNode will permanently delete all your local data (habits, notes, badges, settings). Your leaderboard profile will remain in the cloud unless you manually delete it from Settings before uninstalling. Always create a backup before uninstalling.
+</div>
+
+<h3>10.4 Right to Erasure (GDPR)</h3>
+<p>If you are in the European Economic Area (EEA), you have the right to request complete deletion of all your data (local and cloud). To exercise this right, email us at <a href="mailto:vhirsupport@gmail.com">vhirsupport@gmail.com</a> with your Google account email. We will delete all associated data within 30 days.</p>
 
 <!-- 11 -->
-<h2>11. Your Rights</h2>
+<h2>11. Data Sharing & Disclosure</h2>
 
-<p>As a user, you have the right to:</p>
+<p>We do <strong>NOT</strong> sell, trade, rent, or share your personal data with any third parties for marketing purposes.</p>
+
+<h3>11.1 Data We Share</h3>
+<p>The only data that may be shared:</p>
 <ul>
-  <li><strong>Access:</strong> View all your data within the App at any time</li>
-  <li><strong>Export:</strong> Use the backup feature to export all your data as a JSON file</li>
-  <li><strong>Delete:</strong> Delete individual habits or all data at any time</li>
-  <li><strong>Opt-out of Ads:</strong> Upgrade to Pro or adjust your device's ad personalization settings</li>
-  <li><strong>Control Notifications:</strong> Enable or disable notifications from within the App or through your device settings</li>
-  <li><strong>Control Permissions:</strong> Grant or revoke any permission through your device settings</li>
+  <li><strong>Public Leaderboard Data:</strong> If you opt-in, your username, avatar, score, and level are visible to all app users</li>
+  <li><strong>Anonymous Advertising Data:</strong> Device advertising ID and interaction data sent to Google AdMob and Unity Ads (no personal information)</li>
+  <li><strong>Purchase Transaction Data:</strong> Sent to Google Play for subscription processing (handled entirely by Google)</li>
+  <li><strong>Backup Files:</strong> If you manually export and share backup files, recipients can view your habit data</li>
 </ul>
 
+<h3>11.2 Legal Disclosures</h3>
+<p>We may disclose your information if required by law, such as:</p>
+<ul>
+  <li>To comply with a legal obligation (court order, subpoena, government request)</li>
+  <li>To protect our rights, property, or safety</li>
+  <li>To prevent fraud, abuse, or illegal activity</li>
+  <li>To enforce our Terms of Service</li>
+</ul>
+
+<h3>11.3 Business Transfers</h3>
+<p>If HabitNode is acquired by another company, sold, or merged, your data may be transferred to the new owner. You will be notified of any such change via email or in-app notification.</p>
+
 <!-- 12 -->
-<h2>12. Changes to This Policy</h2>
+<h2>12. Your Rights & Choices</h2>
 
-<p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated "Last Updated" date. We encourage you to review this Privacy Policy periodically.</p>
+<p>As a user, you have the following rights:</p>
 
-<p>Significant changes will be notified through the App or this page. Continued use of the App after changes constitutes acceptance of the updated Privacy Policy.</p>
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th>Right</th>
+      <th>How to Exercise</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Access Your Data</strong></td>
+      <td>View all your data within the App at any time. Use the backup feature to export a complete copy.</td>
+    </tr>
+    <tr>
+      <td><strong>Correct Your Data</strong></td>
+      <td>Edit habits, notes, profile information, and settings directly in the App.</td>
+    </tr>
+    <tr>
+      <td><strong>Delete Your Data</strong></td>
+      <td>Delete individual items, reset all data, delete leaderboard profile, or uninstall the App.</td>
+    </tr>
+    <tr>
+      <td><strong>Export Your Data</strong></td>
+      <td>Use Settings → Backup & Restore → Create Backup to export all data as a JSON file.</td>
+    </tr>
+    <tr>
+      <td><strong>Opt-Out of Leaderboard</strong></td>
+      <td>Settings → Leaderboard → Opt Out (hides your profile from public ranking).</td>
+    </tr>
+    <tr>
+      <td><strong>Opt-Out of Personalized Ads</strong></td>
+      <td>Android Settings → Google → Ads → Opt out of Ads Personalization, or upgrade to Pro.</td>
+    </tr>
+    <tr>
+      <td><strong>Control Notifications</strong></td>
+      <td>Enable/disable in-app notifications from Settings → Notifications, or system settings.</td>
+    </tr>
+    <tr>
+      <td><strong>Control Permissions</strong></td>
+      <td>Grant or revoke permissions through Android Settings → Apps → HabitNode → Permissions.</td>
+    </tr>
+    <tr>
+      <td><strong>Withdraw Consent</strong></td>
+      <td>Opt-out of leaderboard, disable Google Drive backup, or sign out of Google account anytime.</td>
+    </tr>
+    <tr>
+      <td><strong>Request Data Deletion (GDPR)</strong></td>
+      <td>Email <a href="mailto:vhirsupport@gmail.com">vhirsupport@gmail.com</a> to request complete data deletion.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 <!-- 13 -->
-<h2>13. Contact Us</h2>
+<h2>13. International Data Transfers</h2>
 
-<p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us:</p>
+<p>HabitNode is developed in India. If you use cloud features (leaderboard, Google Drive backup), your data may be stored on servers located in:</p>
+<ul>
+  <li><strong>Google Cloud Platform:</strong> Firestore databases may be hosted in various regions (typically asia-south1 for Indian users)</li>
+  <li><strong>Google Drive:</strong> Your backup files are stored in your Google Drive account (server location determined by Google)</li>
+</ul>
+
+<p>Google complies with international data protection laws, including GDPR for European users and CCPA for California users. For more information, see:</p>
+<p>📄 <a href="https://cloud.google.com/security/compliance" target="_blank" rel="noopener">Google Cloud Compliance</a></p>
+
+<!-- 14 -->
+<h2>14. Security Measures</h2>
+
+<p>We take data security seriously and implement the following measures:</p>
+
+<h3>14.1 Technical Safeguards</h3>
+<ul>
+  <li><strong>Encryption in Transit:</strong> All network requests use HTTPS/TLS encryption</li>
+  <li><strong>Encryption at Rest:</strong> Sensitive local data is encrypted using Hive encryption</li>
+  <li><strong>Secure Authentication:</strong> Firebase Authentication with Google OAuth 2.0 (no password storage)</li>
+  <li><strong>Firestore Security Rules:</strong> Server-side rules prevent unauthorized access to other users' data</li>
+  <li><strong>Input Validation:</strong> All user inputs are sanitized to prevent injection attacks</li>
+  <li><strong>No Hardcoded Secrets:</strong> API keys and credentials are stored securely and obfuscated</li>
+</ul>
+
+<h3>14.2 Organizational Safeguards</h3>
+<ul>
+  <li>Access to cloud data (Firestore) is restricted to authorized developers only</li>
+  <li>We conduct regular security audits and code reviews</li>
+  <li>Third-party libraries are kept updated to patch security vulnerabilities</li>
+  <li>We follow Google Play security best practices and comply with app security policies</li>
+</ul>
+
+<h3>14.3 Incident Response</h3>
+<p>In the unlikely event of a data breach, we will:</p>
+<ul>
+  <li>Notify affected users within 72 hours via email or in-app notification</li>
+  <li>Investigate the cause and take corrective action</li>
+  <li>Report the breach to relevant authorities as required by law</li>
+  <li>Provide guidance on how users can protect their accounts</li>
+</ul>
+
+<!-- 15 -->
+<h2>15. Cookies & Tracking Technologies</h2>
+
+<p>HabitNode does <strong>NOT</strong> use cookies or similar tracking technologies. However:</p>
+<ul>
+  <li><strong>Advertising SDKs:</strong> Google AdMob and Unity Ads may use device advertising IDs to track ad performance and deliver personalized ads</li>
+  <li><strong>Firebase Analytics:</strong> If implemented in future updates, we will use Firebase Analytics to understand app usage patterns (anonymized data only)</li>
+</ul>
+
+<p>You can reset your advertising ID or opt-out of personalized ads through your Android settings.</p>
+
+<!-- 16 -->
+<h2>16. Third-Party Links</h2>
+
+<p>HabitNode may contain links to third-party websites or services (e.g., Google Play Store, Google Drive, Firebase documentation). We are not responsible for the privacy practices of these external sites. Please review their privacy policies before providing any personal information.</p>
+
+<!-- 17 -->
+<h2>17. Changes to This Policy</h2>
+
+<p>We may update this Privacy Policy from time to time to reflect changes in:</p>
+<ul>
+  <li>App features and functionality</li>
+  <li>Legal requirements and regulations</li>
+  <li>Third-party service integrations</li>
+  <li>Security practices and technologies</li>
+</ul>
+
+<p>Any changes will be reflected on this page with an updated "Last Updated" date. We encourage you to review this Privacy Policy periodically.</p>
+
+<h3>17.1 Notification of Material Changes</h3>
+<p>For significant changes (e.g., new data collection practices, changes in data sharing), we will notify you through:</p>
+<ul>
+  <li>In-app notification or pop-up</li>
+  <li>Email (if you've provided an email address for leaderboard)</li>
+  <li>Prominent notice on this privacy policy page</li>
+</ul>
+
+<p>Continued use of the App after changes constitutes acceptance of the updated Privacy Policy. If you do not agree with the changes, please stop using the App and delete your account.</p>
+
+<!-- 18 -->
+<h2>18. Contact Us</h2>
+
+<p>If you have any questions, concerns, requests, or complaints regarding this Privacy Policy or our data practices, please contact us:</p>
 
 <ul>
   <li><strong>Developer:</strong> VHIR</li>
   <li><strong>Email:</strong> <a href="mailto:vhirsupport@gmail.com">vhirsupport@gmail.com</a></li>
   <li><strong>Website:</strong> <a href="https://vrapp24.blogspot.com/" target="_blank" rel="noopener">vrapp24.blogspot.com</a></li>
   <li><strong>App:</strong> <a href="https://play.google.com/store/apps/details?id=com.habit.node" target="_blank" rel="noopener">HabitNode on Google Play</a></li>
+  <li><strong>Support Language:</strong> English, Bengali (বাংলা)</li>
 </ul>
 
 <p>We will respond to your inquiry within <strong>7 business days</strong>.</p>
+
+<h3>18.1 Data Protection Officer (GDPR Compliance)</h3>
+<p>For privacy-related inquiries from users in the European Economic Area (EEA), you can contact our Data Protection Officer at: <a href="mailto:vhirsupport@gmail.com">vhirsupport@gmail.com</a> (Subject: "GDPR Request - HabitNode")</p>
+
+<h3>18.2 Supervisory Authority (EU Users)</h3>
+<p>If you are in the EEA and believe we have not adequately addressed your privacy concerns, you have the right to lodge a complaint with your local data protection authority.</p>
+
+<!-- 19 -->
+<h2>19. Legal Compliance</h2>
+
+<p>HabitNode complies with the following privacy laws and regulations:</p>
+<ul>
+  <li><strong>GDPR</strong> (General Data Protection Regulation) — European Union</li>
+  <li><strong>CCPA</strong> (California Consumer Privacy Act) — California, USA</li>
+  <li><strong>COPPA</strong> (Children's Online Privacy Protection Act) — USA</li>
+  <li><strong>IT Act 2000</strong> (Information Technology Act) — India</li>
+  <li><strong>Google Play Data Safety Requirements</strong> — Global</li>
+  <li><strong>Google Play UGC Policy</strong> — Global</li>
+</ul>
+
+<!-- 20 -->
+<h2>20. Summary of Key Points</h2>
+
+<div class="success">
+  ✅ <strong>What Data We Collect:</strong><br>
+  • Local: Habits, notes, settings, badges (stored on your device)<br>
+  • Cloud (Optional): Username, avatar, score for leaderboard (Firestore)<br>
+  • Cloud (Optional): Encrypted backup files (Google Drive)<br><br>
+
+  ✅ <strong>How We Use Data:</strong><br>
+  • Track your habits and progress locally<br>
+  • Display your profile on leaderboard (if opted-in)<br>
+  • Backup your data to Google Drive (if enabled)<br>
+  • Show advertisements to free users<br><br>
+
+  ✅ <strong>Who We Share Data With:</strong><br>
+  • Public leaderboard users (username, avatar, score only, if opted-in)<br>
+  • Google AdMob & Unity Ads (anonymous advertising data)<br>
+  • Google Play Billing (purchase transactions)<br>
+  • NO ONE ELSE (we do not sell your data)<br><br>
+
+  ✅ <strong>Your Privacy Rights:</strong><br>
+  • Access, edit, export, and delete your data anytime<br>
+  • Opt-out of leaderboard anytime<br>
+  • Opt-out of personalized ads<br>
+  • Control all permissions from device settings<br>
+  • Request complete data deletion (GDPR)<br><br>
+
+  ✅ <strong>How to Delete Your Data:</strong><br>
+  • Local: Settings → Reset All Data<br>
+  • Leaderboard: Settings → Leaderboard → Delete Profile<br>
+  • Everything: Uninstall the App (but delete cloud profile first)<br><br>
+
+  ✅ <strong>Security:</strong><br>
+  • Local data encrypted with Hive<br>
+  • Cloud data protected by Firestore Security Rules<br>
+  • All network requests use HTTPS encryption<br>
+  • No passwords stored (Google handles authentication)<br><br>
+
+  ✅ <strong>Contact:</strong><br>
+  • Email: <a href="mailto:vhirsupport@gmail.com" style="color: #065f46;">vhirsupport@gmail.com</a><br>
+  • Response time: Within 7 business days
+</div>
 
 </div>
 </div>
@@ -468,6 +885,9 @@
   <p style="margin-top: 8px;">
     <a href="https://vhir-apps.github.io/habit-node-terms_and_conditions/" target="_blank" rel="noopener">Terms & Conditions</a> &nbsp;|&nbsp;
     <a href="mailto:vhirsupport@gmail.com">Contact</a>
+  </p>
+  <p style="margin-top: 12px; font-size: 12px; color: #cbd5e1;">
+    This privacy policy is effective as of January 19, 2025 and applies to all users of HabitNode.
   </p>
 </div>
 
