@@ -33,7 +33,6 @@
     min-height: 100vh;
   }
 
-  /* Background mesh */
   body::before {
     content: '';
     position: fixed;
@@ -53,7 +52,6 @@
     padding: 60px 24px 80px;
   }
 
-  /* Header */
   .header {
     text-align: center;
     margin-bottom: 60px;
@@ -105,7 +103,6 @@
   .meta-row span { display: flex; align-items: center; gap: 6px; }
   .meta-row strong { color: var(--text); }
 
-  /* Privacy-first callout */
   .callout {
     background: linear-gradient(135deg, rgba(16,185,129,0.1), rgba(34,211,238,0.06));
     border: 1px solid rgba(16,185,129,0.25);
@@ -118,11 +115,9 @@
   }
 
   .callout-icon { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
-
   .callout p { color: var(--text); font-size: 15px; }
   .callout strong { color: var(--green); }
 
-  /* Section headers */
   h2 {
     font-family: 'DM Serif Display', serif;
     font-size: 1.45rem;
@@ -147,7 +142,6 @@
 
   p { color: var(--text); margin-bottom: 14px; font-size: 15px; }
 
-  /* Cards */
   .card {
     background: var(--surface2);
     border: 1px solid var(--border);
@@ -159,12 +153,13 @@
   .card-blue  { border-color: rgba(59,130,246,0.25); background: rgba(59,130,246,0.06); }
   .card-green { border-color: rgba(16,185,129,0.25); background: rgba(16,185,129,0.06); }
   .card-amber { border-color: rgba(245,158,11,0.25); background: rgba(245,158,11,0.06); }
+  .card-purple { border-color: rgba(139,92,246,0.25); background: rgba(139,92,246,0.06); }
 
   .card strong { color: var(--blue-light); }
   .card-green strong { color: var(--green); }
   .card-amber strong { color: var(--gold); }
+  .card-purple strong { color: #a78bfa; }
 
-  /* Lists */
   ul {
     list-style: none;
     padding: 0;
@@ -193,7 +188,6 @@
 
   ul li strong { color: #fff; }
 
-  /* Tables */
   .table-wrap { overflow-x: auto; border-radius: 14px; margin: 16px 0; }
 
   table {
@@ -202,25 +196,14 @@
     font-size: 14.5px;
   }
 
-  thead tr {
-    background: var(--blue);
-    color: #fff;
-  }
-
-  thead th {
-    padding: 12px 16px;
-    text-align: left;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-  }
-
+  thead tr { background: var(--blue); color: #fff; }
+  thead th { padding: 12px 16px; text-align: left; font-weight: 600; letter-spacing: 0.04em; }
   tbody tr { background: var(--surface2); border-bottom: 1px solid var(--border); }
   tbody tr:last-child { border-bottom: none; }
   tbody tr:hover { background: rgba(59,130,246,0.08); transition: background 0.2s; }
   tbody td { padding: 11px 16px; color: var(--text); }
   tbody td:first-child { color: #fff; font-weight: 500; }
 
-  /* Permission chips */
   .perm-grid {
     display: flex;
     flex-wrap: wrap;
@@ -253,7 +236,6 @@
     color: var(--green);
   }
 
-  /* NOT collected */
   .not-collected {
     display: flex;
     flex-wrap: wrap;
@@ -273,7 +255,6 @@
     color: #fc8181;
   }
 
-  /* Contact box */
   .contact-box {
     background: var(--surface2);
     border: 1px solid var(--border);
@@ -283,12 +264,7 @@
     margin-top: 16px;
   }
 
-  .contact-box a {
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 500;
-  }
-
+  .contact-box a { color: var(--accent); text-decoration: none; font-weight: 500; }
   .contact-box a:hover { text-decoration: underline; }
 
   .contact-row {
@@ -303,11 +279,9 @@
 
   .contact-row strong { color: var(--muted); font-weight: 500; min-width: 130px; text-align: right; }
 
-  /* Summary table special */
   .summary-table tbody td:last-child { color: var(--muted); }
   .check { color: var(--green); font-size: 16px; }
 
-  /* Footer */
   .footer {
     text-align: center;
     margin-top: 60px;
@@ -320,10 +294,25 @@
 
   .footer strong { color: var(--text); }
 
-  /* Highlight inline */
   .hl { color: var(--accent); font-weight: 600; }
   .hl-green { color: var(--green); font-weight: 600; }
   .hl-gold { color: var(--gold); font-weight: 600; }
+
+  /* Version badge */
+  .version-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(139,92,246,0.15);
+    border: 1px solid rgba(139,92,246,0.3);
+    border-radius: 100px;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #a78bfa;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
 
   @media (max-width: 600px) {
     .wrapper { padding: 36px 16px 60px; }
@@ -342,9 +331,10 @@
     <div class="logo-badge"><span>🔒</span> Official Legal Document</div>
     <h1>HabitNode<br/><em>Privacy Policy</em></h1>
     <div class="meta-row">
-      <span>📅 <strong>Effective Date:</strong> June 2, 2026</span>
+      <span>📅 <strong>Effective Date:</strong> July 1, 2025</span>
       <span>🏢 <strong>Developer:</strong> VHIR Tech</span>
       <span>📦 <strong>Package:</strong> com.habit.node</span>
+      <span>🔢 <strong>Version:</strong> 4.0</span>
       <span>🌍 <strong>Scope:</strong> Global</span>
     </div>
   </div>
@@ -353,7 +343,7 @@
   <div class="callout">
     <div class="callout-icon">🛡️</div>
     <div>
-      <p><strong>Privacy-First Design:</strong> HabitNode stores the majority of your data locally on your device using an encrypted Hive database. Cloud features — including the Global Leaderboard, Google Drive Backup, and Social Chat — are entirely optional and require your explicit consent before activation. You remain in full control of your data at all times.</p>
+      <p><strong>Privacy-First Design:</strong> HabitNode stores the majority of your data locally on your device using an encrypted Hive database. Cloud features — including the Global Leaderboard, Google Drive Backup, Social Chat, and Public Profile — are entirely optional and require your explicit consent before activation. You remain in full control of your data at all times.</p>
       <p style="margin-top:10px; margin-bottom:0;">By downloading, installing, or using HabitNode, you agree to this Privacy Policy. If you do not agree, please discontinue use of the App immediately.</p>
     </div>
   </div>
@@ -364,55 +354,124 @@
   <h3>1.1 Data Stored Locally on Your Device</h3>
   <p>The following data is stored exclusively on your device using the Hive encrypted local database and is never transmitted to our servers unless you explicitly enable a cloud feature:</p>
   <ul>
-    <li><strong>Profile Information:</strong> Display name and avatar emoji (optional)</li>
-    <li><strong>Habit & Routine Data:</strong> Habit names, descriptions, categories, schedules, goals, priorities, notes, completion records, study targets, and progress logs</li>
-    <li><strong>Study Sessions:</strong> Pomodoro timer data, study routine schedules, session history, and study targets</li>
+    <li><strong>Profile Information:</strong> Display name, avatar emoji, tagline, bio, country code (all optional)</li>
+    <li><strong>Habit &amp; Routine Data:</strong> Habit names, descriptions, categories, schedules, goals, priorities, notes, completion records, study targets, and progress logs</li>
+    <li><strong>Study Sessions:</strong> Pomodoro timer data, study routine schedules, session history, subject targets, and daily study time records</li>
     <li><strong>Personal Notes:</strong> Note titles, content, tags, and timestamps</li>
     <li><strong>Missed Habit Reflections:</strong> Optional reasons provided when skipping a habit — used locally for smart reminders only</li>
-    <li><strong>Achievement Data:</strong> Badges earned, XP points, level progress, and streaks</li>
-    <li><strong>App Preferences:</strong> Theme mode, notification settings, sound settings, and alarm configurations</li>
+    <li><strong>Achievement Data:</strong> Badges earned, XP points, level progress, streaks, and trophy cabinet</li>
+    <li><strong>App Preferences:</strong> Theme mode, notification settings, sound settings, alarm configurations, and privacy toggles</li>
+    <li><strong>Study Analytics:</strong> Daily, weekly, and all-time study minutes — stored locally for statistics display</li>
   </ul>
 
-  <h3>1.2 Data Stored in the Cloud (Optional & User-Initiated)</h3>
+  <h3>1.2 Data Stored in the Cloud (Optional &amp; User-Initiated)</h3>
 
   <div class="card card-blue">
-    <p><strong>📊 Global Leaderboard (Opt-In Required)</strong></p>
-    <p>If you voluntarily join the global leaderboard, the following data is stored in Google Cloud Firestore: display name, avatar emoji, total XP score, current level, number of habits created, Firebase Authentication UID (not visible to other users), country code, opt-in status, and timestamps.</p>
-    <p style="margin-bottom:0;">✅ You may opt out or permanently delete your cloud profile at any time via <span class="hl">Settings → Leaderboard → Opt Out or Delete Profile</span>.</p>
+    <p><strong>📊 Global Leaderboard &amp; Public Profile (Opt-In Required)</strong>
+    <span class="version-badge">v4.0 Updated</span></p>
+    <p>If you voluntarily join the global leaderboard, the following data is stored in Google Cloud Firestore:</p>
+    <ul style="margin: 8px 0 12px 0;">
+      <li><strong>Display name, avatar emoji, tagline, bio, country code</strong> (all editable by you)</li>
+      <li><strong>Unique UID</strong> — your Firebase Authentication UID (used to identify your profile; you may copy and share it)</li>
+      <li><strong>XP score, level, study hours, badges unlocked count</strong></li>
+      <li><strong>Daily score, weekly score</strong></li>
+      <li><strong>Posts</strong> you share on the Social Feed</li>
+      <li><strong>Privacy settings:</strong> showLevel, showBadges, showStudyHours toggles</li>
+      <li><strong>Pro status</strong> (boolean — not payment details)</li>
+      <li><strong>Last active timestamp</strong></li>
+    </ul>
+    <p>Your <strong>Privacy Controls:</strong> You may toggle visibility of your level, badges, and study hours independently. You may opt out or permanently delete your cloud profile at any time via <span class="hl">Settings → Leaderboard → Opt Out or Delete Profile</span>.</p>
+    <p style="margin-bottom:0;">⚠️ <strong>What other users can see:</strong> Only your display name, avatar, tagline, bio, country code, XP, level (if enabled), badges (if enabled), study time (if enabled), and social posts. Your email address and exact Firebase UID are never shown to other users.</p>
   </div>
 
   <div class="card card-blue">
-    <p><strong>☁️ Google Drive Backup (User-Initiated)</strong></p>
-    <p style="margin-bottom:0;">When you enable Google Drive backup, your habit data is encrypted and uploaded exclusively to your private Google Drive <code>appDataFolder</code>. This folder is invisible to other apps and accessible only by you and HabitNode.</p>
+    <p><strong>☁️ Google Drive Auto-Backup (User-Initiated)</strong>
+    <span class="version-badge">v4.0 Updated</span></p>
+    <p>When you enable Google Drive backup, your data is encrypted and uploaded to your private Google Drive <code>appDataFolder</code>. This folder is invisible to other apps and accessible only by you and HabitNode.</p>
+    <p><strong>Schema v2 — Data covered by backup:</strong></p>
+    <ul style="margin: 8px 0 12px 0;">
+      <li>All habits, routines, daily study routines</li>
+      <li>All study sessions and study targets</li>
+      <li>Leaderboard profile (local copy)</li>
+      <li>All personal notes</li>
+      <li>App settings and preferences</li>
+      <li>Notification history</li>
+    </ul>
+    <p><strong>Backup Frequency Options:</strong> Every change (with 8-second debounce), daily, weekly, or on app exit. Works on both WiFi and mobile data. An offline pending queue ensures no data loss when connectivity is unavailable.</p>
+    <p style="margin-bottom:0;"><strong>Chat messages are NOT included in Google Drive backup</strong> — they are stored in Firestore and managed separately.</p>
   </div>
 
   <div class="card card-blue">
-    <p><strong>💬 Social Chat Feature (Optional — Account Required)</strong></p>
-    <p>Chat messages are transmitted over encrypted channels (HTTPS/TLS) and stored in Google Cloud Firestore. Messages remain stored until you delete them manually or until account deletion.</p>
-    <p>Your rights: <strong>Delete/Clear History · Unsend Messages · Block Users · Report Users</strong></p>
-    <p style="margin-bottom:0;">🔒 Your private conversations are never shared with advertisers or any external third parties.</p>
+    <p><strong>💬 Social Chat &amp; Direct Messaging (Optional — Account Required)</strong>
+    <span class="version-badge">v4.0 New</span></p>
+    <p>HabitNode includes a built-in real-time direct messaging system. When you use this feature:</p>
+    <ul style="margin: 8px 0 12px 0;">
+      <li>Messages are transmitted over HTTPS/TLS encrypted channels</li>
+      <li>Messages are stored in Google Cloud Firestore under your conversation ID</li>
+      <li>Each message contains: sender UID, message text, timestamp, and isChallenge flag</li>
+      <li>Free users have a daily message limit (20 messages/day) tracked in Firestore</li>
+      <li>Pro users have unlimited messaging</li>
+    </ul>
+    <p><strong>Your controls:</strong> Delete individual messages (Unsend) · Clear entire chat history · Block users · Report users · The blocked users list is stored locally on your device only</p>
+    <p style="margin-bottom:0;">🔒 Your private conversations are never shared with advertisers, third parties, or other users outside the conversation.</p>
+  </div>
+
+  <div class="card card-blue">
+    <p><strong>🔔 Chat Notifications (Local Only)</strong>
+    <span class="version-badge">v4.0 New</span></p>
+    <p>HabitNode uses a Firestore real-time listener to detect new incoming chat messages while the app is in the foreground. When a new message arrives from another user:</p>
+    <ul style="margin: 8px 0 12px 0;">
+      <li>A local notification is displayed on your device using <code>flutter_local_notifications</code></li>
+      <li>The sender's display name and avatar are fetched from Firestore to personalize the notification</li>
+      <li>No data is sent to external push notification servers for chat notifications</li>
+      <li>Notifications are not shown when you have that specific chat conversation open</li>
+    </ul>
+    <p style="margin-bottom:0;">This system works only while the app is running in the foreground or background. It does not use FCM push notifications for chat messages.</p>
+  </div>
+
+  <div class="card card-blue">
+    <p><strong>📢 Social Feed &amp; Posts (Optional)</strong></p>
+    <p>If you choose to share a post on the Social Feed, the following data is stored publicly in Firestore:</p>
+    <ul style="margin: 8px 0 0 0;">
+      <li>Your author UID, display name, avatar emoji</li>
+      <li>Your current XP score at time of posting</li>
+      <li>Post text content and server timestamp</li>
+    </ul>
   </div>
 
   <h3>1.3 Account Information (Google Sign-In)</h3>
   <p>When you sign in with Google, we receive your Google email address, display name, profile photo URL, and unique Firebase Authentication UID. This data is used solely for authentication and cloud feature access. It is never sold or shared with advertisers.</p>
 
-  <h3>1.4 Third-Party Services Used</h3>
+  <h3>1.4 Unique User Identifier (UID) System</h3>
+  <div class="card card-purple">
+    <p><strong>🆔 About Your UID</strong></p>
+    <p>Every HabitNode user who signs in receives a unique identifier (UID) generated by Firebase Authentication. This UID:</p>
+    <ul style="margin: 8px 0 0 0;">
+      <li>Is visible on your own profile and can be copied and shared by you</li>
+      <li>Is used by other users to search for you and send direct messages</li>
+      <li>Is stored as part of your leaderboard profile in Firestore</li>
+      <li>Is <strong>not</strong> your email address and does not directly reveal personal information</li>
+      <li>Cannot be changed — it is permanently linked to your Google account</li>
+    </ul>
+  </div>
+
+  <h3>1.5 Third-Party Services Used</h3>
   <div class="table-wrap">
     <table>
       <thead><tr><th>Service</th><th>Provider</th><th>Purpose</th><th>Data Sent</th></tr></thead>
       <tbody>
         <tr><td>Google AdMob</td><td>Google LLC</td><td>Banner advertisements</td><td>Anonymous ad identifiers</td></tr>
-        <tr><td>Unity Ads</td><td>Unity Technologies</td><td>Interstitial & rewarded ads</td><td>Anonymous ad identifiers</td></tr>
+        <tr><td>Unity Ads</td><td>Unity Technologies</td><td>Interstitial &amp; rewarded ads</td><td>Anonymous ad identifiers</td></tr>
         <tr><td>Firebase Authentication</td><td>Google LLC</td><td>Secure Google Sign-In</td><td>Email, UID, display name</td></tr>
-        <tr><td>Cloud Firestore</td><td>Google LLC</td><td>Leaderboard profiles & chat</td><td>Display name, XP, messages</td></tr>
-        <tr><td>Google Drive API</td><td>Google LLC</td><td>Backup & restore</td><td>Encrypted habit data</td></tr>
-        <tr><td>Firebase Cloud Messaging</td><td>Google LLC</td><td>Push notifications</td><td>FCM device token</td></tr>
-        <tr><td>Google Play Billing</td><td>Google LLC</td><td>In-app purchases</td><td>Transaction data only</td></tr>
+        <tr><td>Cloud Firestore</td><td>Google LLC</td><td>Leaderboard, chat, social feed</td><td>Display name, XP, messages, posts</td></tr>
+        <tr><td>Google Drive API</td><td>Google LLC</td><td>Auto-backup &amp; restore</td><td>Encrypted habit data (appDataFolder)</td></tr>
+        <tr><td>Firebase Cloud Messaging</td><td>Google LLC</td><td>Habit alarm &amp; reminder notifications</td><td>FCM device token</td></tr>
+        <tr><td>Google Play Billing</td><td>Google LLC</td><td>Pro subscription</td><td>Transaction data only</td></tr>
       </tbody>
     </table>
   </div>
 
-  <h3>1.5 Data We Do NOT Collect</h3>
+  <h3>1.6 Data We Do NOT Collect</h3>
   <p>HabitNode does not collect, request, or process any of the following:</p>
   <div class="not-collected">
     <span class="nc-chip">❌ Phone Number</span>
@@ -426,52 +485,66 @@
     <span class="nc-chip">❌ Health / Fitness Data</span>
     <span class="nc-chip">❌ Device IMEI</span>
     <span class="nc-chip">❌ Bluetooth Identifiers</span>
+    <span class="nc-chip">❌ Keystrokes / Clipboard</span>
+    <span class="nc-chip">❌ Screen Recording</span>
   </div>
 
   <!-- SECTION 2 -->
   <h2>2. How We Use Your Information</h2>
   <ul>
-    <li><strong>Local Data:</strong> Habit tracking, smart reminders, push notifications, analytics, achievements, study mode, TTS voice, sound effects — all processed on-device</li>
-    <li><strong>Cloud Data (Optional):</strong> Global leaderboard rankings, peer chat, Google Drive backup, and cross-device sync</li>
-    <li><strong>Advertising:</strong> Displaying relevant ads via Google AdMob and Unity Ads using anonymous identifiers</li>
-    <li><strong>AI Notifications:</strong> Behavioral science-based motivational push notifications — all logic processed locally</li>
-    <li><strong>Authentication:</strong> Verifying identity for cloud features via Firebase Authentication</li>
-    <li><strong>In-App Purchases:</strong> Processing Pro subscription transactions via Google Play Billing</li>
+    <li><strong>Local Habit Tracking:</strong> Habit creation, completion tracking, smart reminders, streak monitoring, XP calculation — all on-device</li>
+    <li><strong>Study Mode:</strong> Pomodoro timer, study routines, TTS voice coach, study session recording — all on-device</li>
+    <li><strong>AI Psychology Notifications:</strong> Behavioral science-based motivational push notifications — all logic processed locally, no data sent externally</li>
+    <li><strong>Full-Screen Alarm System:</strong> Habit alarms with lock screen bypass, TTS voice, sound, and haptic feedback — processed locally</li>
+    <li><strong>Cloud Leaderboard &amp; Profile:</strong> Display global XP rankings, public profiles with stats tabs (Stats, Badges, Posts, Activity)</li>
+    <li><strong>Direct Chat:</strong> Real-time peer-to-peer messaging and habit challenges</li>
+    <li><strong>Chat Notifications:</strong> Local notifications for incoming messages while app is active</li>
+    <li><strong>Social Feed:</strong> Sharing progress updates with the community</li>
+    <li><strong>Player Search:</strong> Finding users by UID or display name via Firestore prefix search</li>
+    <li><strong>Google Drive Backup:</strong> Automatic encrypted backup of all local app data</li>
+    <li><strong>Advertising:</strong> Banner and interstitial ads via Google AdMob and Unity Ads (free users only)</li>
+    <li><strong>Authentication:</strong> Verifying identity for cloud features via Firebase</li>
+    <li><strong>In-App Purchases:</strong> Processing Pro subscription via Google Play Billing</li>
   </ul>
 
   <!-- SECTION 3 -->
-  <h2>3. Data Storage & Security</h2>
+  <h2>3. Data Storage &amp; Security</h2>
   <div class="card card-green">
     <p><strong>Local Storage</strong></p>
-    <p style="margin-bottom:0;">All on-device data is stored in a Hive encrypted local database. Encryption keys are stored securely on your device and are never transmitted.</p>
+    <p style="margin-bottom:0;">All on-device data is stored in a Hive encrypted local database. Encryption keys are stored securely on your device and are never transmitted. This includes habits, notes, sessions, settings, and the local copy of your leaderboard profile.</p>
   </div>
   <div class="card card-blue">
     <p><strong>Cloud Storage</strong></p>
-    <p style="margin-bottom:0;">Leaderboard profiles and chat messages are stored in Google Cloud Firestore with server-side Firestore Security Rules. Google Drive backups are encrypted before upload and stored in your private <code>appDataFolder</code>.</p>
+    <p style="margin-bottom:0;">Leaderboard profiles, chat messages, and social posts are stored in Google Cloud Firestore with server-side Security Rules that ensure users can only read/write their own data. Google Drive backups are encrypted before upload and stored in your private <code>appDataFolder</code> — invisible to other apps and users.</p>
   </div>
   <div class="card card-amber">
     <p><strong>Security Measures</strong></p>
     <ul style="margin-top:8px;">
       <li>HTTPS / TLS encryption for all data in transit</li>
-      <li>Hive AES encryption for data at rest</li>
-      <li>Firebase OAuth 2.0 token-based authentication</li>
+      <li>Hive AES encryption for all data at rest on-device</li>
+      <li>Firebase OAuth 2.0 token-based authentication with automatic token refresh</li>
       <li>Firestore Security Rules — users can only access their own data</li>
+      <li>Chat message delivery rate limiting (daily limit for free users)</li>
+      <li>User blocking stored locally only — not exposing block relationships to third parties</li>
       <li>Regular security reviews and dependency updates</li>
     </ul>
   </div>
 
   <!-- SECTION 4 -->
   <h2>4. Chat Message Retention Policy</h2>
-  <p>Chat messages sent through HabitNode's Social Chat feature are stored in Google Cloud Firestore indefinitely until the user manually deletes them or their account is removed.</p>
+  <p>Chat messages sent through HabitNode's Social Chat feature are stored in Google Cloud Firestore indefinitely until the user manually deletes them or their account is removed. A maximum of 50 messages per conversation are stored; older messages are automatically removed when the limit is exceeded.</p>
   <div class="table-wrap">
     <table>
       <thead><tr><th>Feature</th><th>How It Works</th></tr></thead>
       <tbody>
         <tr><td>Encryption</td><td>All messages transmitted over HTTPS/TLS encrypted channels</td></tr>
+        <tr><td>Storage Limit</td><td>Maximum 50 messages per conversation (older messages auto-removed)</td></tr>
         <tr><td>Storage Duration</td><td>Until user manually deletes or account is removed</td></tr>
         <tr><td>Delete Chat History</td><td>Immediate and permanent removal from Firestore servers</td></tr>
         <tr><td>Unsend Message</td><td>Immediately removed from Firestore — no longer visible to any party</td></tr>
-        <tr><td>Block User</td><td>Blocked user is hidden from feed, chat, and profile views</td></tr>
+        <tr><td>Block User</td><td>Blocked UID stored locally only; blocked user hidden from feed and chat</td></tr>
+        <tr><td>Report User</td><td>Report data sent to moderation collection in Firestore for review</td></tr>
+        <tr><td>Daily Limit</td><td>Free users: 20 messages/day. Pro users: unlimited</td></tr>
         <tr><td>Third-Party Access</td><td>Never shared with advertisers or external parties</td></tr>
       </tbody>
     </table>
@@ -479,6 +552,7 @@
 
   <!-- SECTION 5 -->
   <h2>5. Android Permissions Explained</h2>
+
   <h3>Required Permissions</h3>
   <div class="perm-grid">
     <span class="chip">🌐 INTERNET</span>
@@ -512,57 +586,95 @@
     <span class="chip safe">✅ No Call Logs / SMS</span>
     <span class="chip safe">✅ No Bluetooth</span>
     <span class="chip safe">✅ No Calendar</span>
+    <span class="chip safe">✅ No Screen Recording</span>
   </div>
 
   <div class="card card-amber" style="margin-top:16px;">
     <p><strong>⏰ USE_FULL_SCREEN_INTENT — Why We Use It</strong></p>
-    <p style="margin-bottom:0;">This permission is used exclusively for the habit alarm system. When a scheduled habit alarm fires, the app displays a full-screen alert that bypasses the lock screen with a TTS voice announcement, sound, and haptic feedback. The bypass is active only during the alarm and is disabled immediately after dismissal or snooze. This is a core habit-reminder feature and poses no ongoing security risk.</p>
+    <p>This permission is used exclusively for the habit alarm system. When a scheduled habit alarm fires, HabitNode displays a full-screen alert that:</p>
+    <ul style="margin: 8px 0 8px 0;">
+      <li>Activates your screen and bypasses the lock screen</li>
+      <li>Plays an alarm sound and haptic feedback</li>
+      <li>Announces the habit name via TTS (Text-to-Speech)</li>
+      <li>Offers Snooze (5 minutes) and Dismiss options</li>
+    </ul>
+    <p style="margin-bottom:0;">The lock screen bypass is active <strong>only during the alarm</strong> and is disabled immediately after dismissal or snooze. The app itself cannot be used from the lock screen — only the alarm overlay is shown. This is a core habit-reminder feature and poses no ongoing security risk.</p>
   </div>
 
   <!-- SECTION 6 -->
-  <h2>6. Advertising</h2>
-  <p>HabitNode displays advertisements through <strong>Google AdMob</strong> (banner ads) and <strong>Unity Ads</strong> (interstitial and rewarded ads). Advertising identifiers are anonymous and are used in accordance with Google's and Unity's respective privacy policies.</p>
+  <h2>6. Public Profile &amp; Player Search</h2>
+  <div class="card card-purple">
+    <p><strong>👤 Public Profile System</strong>
+    <span class="version-badge">v4.0 New</span></p>
+    <p>When you opt into the leaderboard, other users can view your public profile. Your profile includes four tabs:</p>
+    <ul style="margin: 8px 0 12px 0;">
+      <li><strong>Stats:</strong> XP score, rank, daily score, weekly score, study time (if enabled), level (if enabled)</li>
+      <li><strong>Badges:</strong> Unlocked achievement badges (if enabled)</li>
+      <li><strong>Posts:</strong> Your social feed posts</li>
+      <li><strong>Activity:</strong> Estimated sessions based on study time</li>
+    </ul>
+    <p><strong>Privacy Controls You Have:</strong></p>
+    <ul style="margin: 8px 0 0 0;">
+      <li>Toggle visibility of Level, Badges, and Study Hours independently</li>
+      <li>Edit or remove your tagline, bio, and country code at any time</li>
+      <li>Opt out of the leaderboard entirely — hides your profile from all users</li>
+      <li>Delete your cloud profile permanently via Settings</li>
+    </ul>
+  </div>
+
+  <div class="card card-blue" style="margin-top:14px;">
+    <p><strong>🔍 Player Search</strong></p>
+    <p style="margin-bottom:0;">Other users can search for you by entering your UID or display name. Display name prefix search uses Firestore indexing. Only users who have opted into the leaderboard are searchable. You can prevent discovery by opting out of the leaderboard.</p>
+  </div>
+
+  <!-- SECTION 7 -->
+  <h2>7. Advertising</h2>
+  <p>HabitNode displays advertisements through <strong>Google AdMob</strong> (banner ads) and <strong>Unity Ads</strong> (interstitial and rewarded ads). Advertising identifiers are anonymous.</p>
   <ul>
     <li><strong>Pro subscribers</strong> see zero advertisements — ad SDKs are not loaded for Pro users</li>
     <li>You may opt out of personalized ads via <span class="hl">Android Settings → Google → Ads → Opt out of Ads Personalization</span></li>
-    <li>Advertising data is never linked to your habits, notes, or personal profile</li>
-  </ul>
-
-  <!-- SECTION 7 -->
-  <h2>7. In-App Purchases</h2>
-  <p>HabitNode offers an optional Pro subscription processed exclusively through <strong>Google Play Billing</strong>:</p>
-  <ul>
-    <li><strong>Monthly Plan:</strong> Local pricing applies per region</li>
-    <li><strong>Yearly Plan:</strong> Local pricing applies per region</li>
-    <li>HabitNode does not store, process, or have access to your payment card details</li>
-    <li>All billing is handled entirely by Google Play — governed by Google's Terms of Service</li>
-    <li><strong>Pro features include:</strong> Ad-free experience, unlimited habits, advanced analytics, priority cloud sync, and exclusive badges/themes</li>
+    <li>Advertising data is never linked to your habits, notes, chat messages, or personal profile</li>
+    <li>Ads are never shown during study sessions, alarm screens, or chat</li>
   </ul>
 
   <!-- SECTION 8 -->
-  <h2>8. User-Generated Content (UGC)</h2>
-  <p><strong>Publicly visible</strong> (only if you opt into the Leaderboard): Display name, avatar, XP score, level, country, and number of habits created.</p>
-  <p><strong>Never publicly shared:</strong> Actual habit names, descriptions, notes, personal messages, or email address.</p>
-  <div class="card card-amber">
-    <p><strong>⚠️ Content Moderation</strong></p>
-    <p style="margin-bottom:0;">Usernames and chat messages must not contain offensive, harmful, or illegal content. Violations may result in account suspension. Users may: Report offensive content · Block users · Unsend messages · Delete chat history · Opt out of the leaderboard entirely.</p>
-  </div>
-  <p style="margin-top:14px;"><strong>Age Restriction:</strong> The leaderboard and chat features are available only to users aged <span class="hl">13 years and older</span>.</p>
+  <h2>8. In-App Purchases (Pro Subscription)</h2>
+  <p>HabitNode offers an optional Pro subscription processed exclusively through <strong>Google Play Billing</strong>:</p>
+  <ul>
+    <li>Monthly and yearly plans — local pricing applies per region</li>
+    <li>HabitNode does not store, process, or have access to your payment card details</li>
+    <li>All billing is handled entirely by Google Play</li>
+    <li><strong>Pro features include:</strong> Ad-free experience, unlimited habits, unlimited chat messages, advanced analytics, priority cloud sync, and exclusive badges/themes</li>
+  </ul>
 
   <!-- SECTION 9 -->
-  <h2>9. Children's Privacy (COPPA)</h2>
-  <p>HabitNode is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has provided personal information through our App, please contact us immediately at <span class="hl">vhirsupport@gmail.com</span> — we will delete the data within 48 hours of verification.</p>
+  <h2>9. User-Generated Content (UGC)</h2>
+  <p><strong>Publicly visible</strong> (only if you opt into the Leaderboard): Display name, avatar, tagline, bio, country code, XP score, level, study hours, badges, and social feed posts.</p>
+  <p><strong>Never publicly shared:</strong> Actual habit names, descriptions, personal notes, private messages, or email address.</p>
+  <div class="card card-amber">
+    <p><strong>⚠️ Content Moderation</strong></p>
+    <p>Usernames, bios, taglines, chat messages, and social posts must not contain offensive, harmful, illegal, or spam content. Violations may result in account suspension.</p>
+    <p style="margin-bottom:0;"><strong>Moderation tools available to all users:</strong> Report offensive content (with reason categories: spam, abusive, impersonation, inappropriate, other) · Block users · Unsend messages · Delete chat history · Opt out of leaderboard entirely.</p>
+  </div>
+  <p style="margin-top:14px;"><strong>Age Restriction:</strong> The leaderboard, chat, and social features are available only to users aged <span class="hl">13 years and older</span>.</p>
 
   <!-- SECTION 10 -->
-  <h2>10. Data Retention & Deletion</h2>
+  <h2>10. Children's Privacy (COPPA)</h2>
+  <p>HabitNode is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has provided personal information through our App, please contact us immediately at <span class="hl">vhirsupport@gmail.com</span> — we will delete the data within 48 hours of verification.</p>
+
+  <!-- SECTION 11 -->
+  <h2>11. Data Retention &amp; Deletion</h2>
   <div class="table-wrap">
     <table>
       <thead><tr><th>Data Type</th><th>Retention Period</th><th>How to Delete</th></tr></thead>
       <tbody>
         <tr><td>Local habit data</td><td>Until app is uninstalled</td><td>Settings → Reset All Data</td></tr>
         <tr><td>Leaderboard profile</td><td>Until opt-out or deletion</td><td>Settings → Leaderboard → Delete Profile</td></tr>
-        <tr><td>Chat messages</td><td>Until user deletion</td><td>Chat Screen → Clear History / Long-press → Unsend</td></tr>
+        <tr><td>Social Feed posts</td><td>Until user deletion</td><td>Profile → My Posts → Delete icon</td></tr>
+        <tr><td>Chat messages</td><td>Until user deletion (max 50/conversation)</td><td>Chat Screen → Clear History / Long-press → Unsend</td></tr>
         <tr><td>Google Drive backups</td><td>Until manual deletion</td><td>Google Drive App → Manage Backups</td></tr>
+        <tr><td>Chat daily limit counter</td><td>Resets daily automatically</td><td>Automatic — no action needed</td></tr>
+        <tr><td>Report records</td><td>Until moderation review complete</td><td>Email vhirsupport@gmail.com</td></tr>
         <tr><td>Firebase account data</td><td>Until account deletion</td><td>Email vhirsupport@gmail.com</td></tr>
       </tbody>
     </table>
@@ -572,36 +684,42 @@
     <p style="margin-bottom:0;">EU/UK users may submit a data deletion request by emailing <span class="hl">vhirsupport@gmail.com</span> with the subject line: <em>"GDPR Data Deletion Request — HabitNode"</em>. All personal data will be permanently deleted within <strong>30 days</strong>.</p>
   </div>
 
-  <!-- SECTION 11 -->
-  <h2>11. Data Sharing & Disclosure</h2>
+  <!-- SECTION 12 -->
+  <h2>12. Data Sharing &amp; Disclosure</h2>
   <p>We do <strong class="hl-green">not</strong> sell, trade, rent, or share your personal data for marketing or commercial purposes.</p>
   <p>Limited data sharing occurs only in these circumstances:</p>
   <ul>
-    <li><strong>Public Leaderboard (opt-in only):</strong> Display name, avatar, XP score, and level are visible to other users</li>
-    <li><strong>Chat Messages:</strong> Visible only to the conversation participants</li>
+    <li><strong>Public Leaderboard (opt-in only):</strong> Display name, avatar, XP, level, study hours, and badges visible to other users</li>
+    <li><strong>Social Feed (opt-in only):</strong> Posts visible to all leaderboard participants</li>
+    <li><strong>Chat Messages:</strong> Visible only to conversation participants</li>
+    <li><strong>Player Search:</strong> Display name and avatar visible in search results to leaderboard participants</li>
     <li><strong>Advertising Partners:</strong> Anonymous, non-personal ad identifiers only (AdMob, Unity Ads)</li>
     <li><strong>Google Play:</strong> Transaction data for purchase verification only</li>
     <li><strong>Legal Compliance:</strong> If required by law, court order, or to protect rights and safety</li>
   </ul>
 
-  <!-- SECTION 12 -->
-  <h2>12. Your Rights & Choices</h2>
+  <!-- SECTION 13 -->
+  <h2>13. Your Rights &amp; Choices</h2>
   <ul>
-    <li><strong>Access & Export:</strong> View all your data within the App or export via Google Drive Backup</li>
+    <li><strong>Access &amp; Export:</strong> View all your data within the App or export via Google Drive Backup</li>
     <li><strong>Correct:</strong> Edit your profile, habits, and settings directly within the App</li>
     <li><strong>Delete Local Data:</strong> Settings → Reset All Data</li>
     <li><strong>Delete Cloud Profile:</strong> Settings → Leaderboard → Delete Profile</li>
+    <li><strong>Edit Public Profile:</strong> Profile Screen → Edit Mode — update name, bio, tagline, country, avatar anytime</li>
+    <li><strong>Toggle Privacy:</strong> Control visibility of level, badges, and study hours on your public profile</li>
     <li><strong>Opt-Out of Leaderboard:</strong> Settings → Leaderboard → Opt Out</li>
-    <li><strong>Delete Chat History:</strong> Chat Screen → Clear History</li>
+    <li><strong>Delete Social Posts:</strong> Profile → My Posts → Delete icon</li>
+    <li><strong>Delete Chat History:</strong> Chat Screen → Clear History button</li>
     <li><strong>Unsend a Message:</strong> Long-press message → Unsend</li>
-    <li><strong>Block a User:</strong> User Profile → Block</li>
+    <li><strong>Block a User:</strong> User Profile → Block (stored locally only)</li>
+    <li><strong>Report a User:</strong> User Profile or Leaderboard → Report (with reason category)</li>
     <li><strong>Opt-Out of Personalized Ads:</strong> Android Settings → Google → Ads, or upgrade to Pro</li>
     <li><strong>Withdraw Consent:</strong> Disable cloud backup, sign out, or opt out of leaderboard at any time</li>
     <li><strong>GDPR / CCPA Request:</strong> Email vhirsupport@gmail.com — response within 7 business days</li>
   </ul>
 
-  <!-- SECTION 13 -->
-  <h2>13. Third-Party Services & International Data Transfers</h2>
+  <!-- SECTION 14 -->
+  <h2>14. Third-Party Services &amp; International Data Transfers</h2>
   <p>Each third-party service used by HabitNode is governed by its own privacy policy:</p>
   <ul>
     <li><strong>Google AdMob:</strong> <a href="https://policies.google.com/privacy" style="color:var(--accent);">policies.google.com/privacy</a></li>
@@ -611,50 +729,60 @@
   </ul>
   <p>Data may be stored on Google Cloud Platform servers located globally. All international data transfers comply with applicable regulations including GDPR (EU/UK), CCPA (California), and COPPA (USA).</p>
 
-  <!-- SECTION 14 -->
-  <h2>14. Legal Compliance</h2>
+  <!-- SECTION 15 -->
+  <h2>15. Legal Compliance</h2>
   <ul>
     <li><strong>GDPR</strong> — General Data Protection Regulation (European Union / United Kingdom)</li>
     <li><strong>CCPA</strong> — California Consumer Privacy Act (United States)</li>
     <li><strong>COPPA</strong> — Children's Online Privacy Protection Act (United States)</li>
     <li><strong>IT Act 2000</strong> — Information Technology Act (India)</li>
-    <li><strong>Google Play Developer Policy</strong> — Data Safety, UGC, and Billing requirements</li>
+    <li><strong>Google Play Developer Policy</strong> — Data Safety, UGC, Billing, and Notification requirements</li>
     <li><strong>Google Play Families Policy</strong> — Age-appropriate content and data handling</li>
+    <li><strong>USE_FULL_SCREEN_INTENT Policy</strong> — Used exclusively for alarm/reminder functionality as declared</li>
   </ul>
 
-  <!-- SECTION 15 -->
-  <h2>15. Changes to This Privacy Policy</h2>
-  <p>We may update this Privacy Policy periodically to reflect changes in the App or applicable law. For significant changes, we will notify you via in-app notification, email, or a prominent notice on this page. The "Effective Date" at the top of this document reflects the date of the most recent revision. Continued use of HabitNode after any changes constitutes your acceptance of the updated policy.</p>
-
   <!-- SECTION 16 -->
-  <h2>16. Contact Us</h2>
+  <h2>16. Changes to This Privacy Policy</h2>
+  <p>We may update this Privacy Policy periodically to reflect changes in the App or applicable law. For significant changes, we will notify you via in-app notification, email, or a prominent notice on this page. The "Effective Date" at the top of this document reflects the date of the most recent revision. Continued use of HabitNode after any changes constitutes your acceptance of the updated policy.</p>
+  <p><strong>Version history:</strong></p>
+  <ul>
+    <li><strong>v4.0 (July 1, 2025):</strong> Added Chat Notification Service, UID System, Public Profile with tabs, Player Search, Social Feed Posts, Auto-Backup Schema v2 details, Block/Report system details, 50-message conversation limit</li>
+    <li><strong>v3.0 (June 2, 2025):</strong> Initial release — Leaderboard, Google Drive Backup, Chat, XP System</li>
+  </ul>
+
+  <!-- SECTION 17 -->
+  <h2>17. Contact Us</h2>
   <div class="contact-box">
     <div style="font-size:2rem; margin-bottom:16px;">📬</div>
     <div class="contact-row"><strong>Developer</strong> VHIR Tech</div>
     <div class="contact-row"><strong>App Name</strong> HabitNode</div>
     <div class="contact-row"><strong>Package ID</strong> com.habit.node</div>
+    <div class="contact-row"><strong>App Version</strong> 4.0</div>
     <div class="contact-row"><strong>Email</strong> <a href="mailto:vhirsupport@gmail.com">vhirsupport@gmail.com</a></div>
     <div class="contact-row"><strong>Website</strong> <a href="https://habitnode.blogspot.com">habitnode.blogspot.com</a></div>
     <div class="contact-row"><strong>Support Languages</strong> English · বাংলা (Bengali)</div>
     <div class="contact-row"><strong>Response Time</strong> Within 7 business days</div>
   </div>
 
-  <!-- SECTION 17 — SUMMARY -->
-  <h2>17. Summary at a Glance</h2>
+  <!-- SECTION 18 — SUMMARY -->
+  <h2>18. Summary at a Glance</h2>
   <div class="table-wrap summary-table">
     <table>
       <thead><tr><th>Topic</th><th>Summary</th></tr></thead>
       <tbody>
-        <tr><td>Data Collected</td><td>Habits, notes, settings (local); username, score, chat (cloud — optional only)</td></tr>
-        <tr><td>How It's Used</td><td>Habit tracking, leaderboard, peer chat, backup, advertising, authentication</td></tr>
+        <tr><td>Data Collected</td><td>Habits, notes, settings (local); username, UID, score, chat, posts, profile (cloud — optional only)</td></tr>
+        <tr><td>How It's Used</td><td>Habit tracking, leaderboard, chat, profile, backup, advertising, authentication</td></tr>
         <tr><td>We Never Sell Your Data</td><td><span class="check">✅ Confirmed — never sold or rented</span></td></tr>
-        <tr><td>Chat Privacy</td><td>Encrypted · user-controlled deletion · unsend · block · report</td></tr>
-        <tr><td>Chat Retention</td><td>Until user manually deletes or account is removed</td></tr>
+        <tr><td>Chat Privacy</td><td>Encrypted · 50-message limit · user-controlled deletion · unsend · block · report</td></tr>
+        <tr><td>Chat Notifications</td><td>Local only — no external push servers used for chat</td></tr>
+        <tr><td>Public Profile</td><td>Opt-in only · privacy toggles for level, badges, study hours · full delete available</td></tr>
+        <tr><td>UID System</td><td>Firebase UID — visible to you, shareable by you, used for player search</td></tr>
+        <tr><td>Auto Backup</td><td>Schema v2 — all local data · Google Drive appDataFolder · encrypted · every change or scheduled</td></tr>
         <tr><td>Permissions</td><td>No camera, microphone, GPS, contacts, or SMS</td></tr>
-        <tr><td>Lock Screen Alarm</td><td>Active only during alarm — disabled immediately after</td></tr>
-        <tr><td>Your Rights</td><td>Access · edit · export · delete · block · report · opt-out · withdraw consent</td></tr>
-        <tr><td>Security</td><td>HTTPS/TLS · Hive AES encryption · Firestore Rules · OAuth 2.0</td></tr>
-        <tr><td>Compliance</td><td>GDPR · CCPA · COPPA · Google Play Policy · IT Act 2000</td></tr>
+        <tr><td>Lock Screen Alarm</td><td>Active only during alarm — disabled immediately after · app cannot be used from lock screen</td></tr>
+        <tr><td>Your Rights</td><td>Access · edit · export · delete · block · report · opt-out · toggle privacy · withdraw consent</td></tr>
+        <tr><td>Security</td><td>HTTPS/TLS · Hive AES encryption · Firestore Rules · OAuth 2.0 · rate limiting</td></tr>
+        <tr><td>Compliance</td><td>GDPR · CCPA · COPPA · Google Play Policy · IT Act 2000 · USE_FULL_SCREEN_INTENT Policy</td></tr>
         <tr><td>Contact</td><td>vhirsupport@gmail.com — response within 7 business days</td></tr>
       </tbody>
     </table>
@@ -662,9 +790,9 @@
 
   <!-- FOOTER -->
   <div class="footer">
-    <p>© 2026 <strong>HabitNode by VHIR Tech</strong>. All rights reserved.</p>
-    <p>This Privacy Policy is effective as of <strong>June 2, 2026</strong> and applies to all users of HabitNode worldwide.</p>
-    <p style="margin-top:8px; color: #475569; font-size:12px;">com.habit.node · Built with Flutter · Powered by Firebase & Google Cloud</p>
+    <p>© 2025 <strong>HabitNode by VHIR Tech</strong>. All rights reserved.</p>
+    <p>This Privacy Policy is effective as of <strong>July 1, 2025</strong> and applies to all users of HabitNode worldwide.</p>
+    <p style="margin-top:8px; color: #475569; font-size:12px;">com.habit.node · v4.0 · Built with Flutter · Powered by Firebase &amp; Google Cloud</p>
   </div>
 
 </div>
