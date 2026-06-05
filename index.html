@@ -3,74 +3,298 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>HabitNode — Terms & Conditions | VHIR Tech</title>
+<title>HabitNode — Privacy Policy | VHIR Tech</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
 <style>
   :root {
-    --navy: #0a1628; --navy2: #0f2040; --blue: #1a56db; --blue-light: #3b82f6;
-    --accent: #22d3ee; --gold: #f59e0b; --surface: #111827; --surface2: #1a2540;
-    --border: rgba(255,255,255,0.07); --text: #e2e8f0; --muted: #94a3b8;
-    --green: #10b981; --red: #ef4444;
+    --navy: #0a1628;
+    --navy2: #0f2040;
+    --blue: #1a56db;
+    --blue-light: #3b82f6;
+    --accent: #22d3ee;
+    --gold: #f59e0b;
+    --surface: #111827;
+    --surface2: #1a2540;
+    --border: rgba(255,255,255,0.07);
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --green: #10b981;
+    --red: #ef4444;
   }
+
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
   body {
-    background: var(--navy); color: var(--text);
-    font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.75; min-height: 100vh;
+    background: var(--navy);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    min-height: 100vh;
   }
+
   body::before {
-    content: ''; position: fixed; inset: 0;
+    content: '';
+    position: fixed;
+    inset: 0;
     background:
       radial-gradient(ellipse 80% 60% at 10% 10%, rgba(26,86,219,0.18) 0%, transparent 60%),
       radial-gradient(ellipse 60% 50% at 90% 80%, rgba(34,211,238,0.10) 0%, transparent 60%);
-    pointer-events: none; z-index: 0;
+    pointer-events: none;
+    z-index: 0;
   }
-  .wrapper { position: relative; z-index: 1; max-width: 860px; margin: 0 auto; padding: 60px 24px 80px; }
-  .header { text-align: center; margin-bottom: 60px; padding-bottom: 40px; border-bottom: 1px solid var(--border); }
+
+  .wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 60px 24px 80px;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--border);
+  }
+
   .logo-badge {
-    display: inline-flex; align-items: center; gap: 10px;
-    background: rgba(26,86,219,0.15); border: 1px solid rgba(26,86,219,0.35);
-    border-radius: 100px; padding: 8px 20px; font-size: 13px; font-weight: 600;
-    color: var(--blue-light); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(26,86,219,0.15);
+    border: 1px solid rgba(26,86,219,0.35);
+    border-radius: 100px;
+    padding: 8px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--blue-light);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
   }
-  h1 { font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 5vw, 3rem); color: #fff; line-height: 1.15; margin-bottom: 16px; }
+
+  .logo-badge span { font-size: 16px; }
+
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+
   h1 em { font-style: italic; color: var(--accent); }
-  .meta-row { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; font-size: 13.5px; color: var(--muted); margin-top: 20px; }
+
+  .meta-row {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-size: 13.5px;
+    color: var(--muted);
+    margin-top: 20px;
+  }
+
   .meta-row span { display: flex; align-items: center; gap: 6px; }
   .meta-row strong { color: var(--text); }
+
+  .callout {
+    background: linear-gradient(135deg, rgba(16,185,129,0.1), rgba(34,211,238,0.06));
+    border: 1px solid rgba(16,185,129,0.25);
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-bottom: 50px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .callout-icon { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+  .callout p { color: var(--text); font-size: 15px; }
+  .callout strong { color: var(--green); }
+
   a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
   a:hover { color: #67e8f9; }
+
   h2 {
-    font-family: 'DM Serif Display', serif; font-size: 1.45rem; color: #fff;
-    margin: 50px 0 20px; padding: 14px 20px; background: var(--surface2);
-    border-left: 4px solid var(--blue-light); border-radius: 0 12px 12px 0;
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.45rem;
+    color: #fff;
+    margin: 50px 0 20px;
+    padding: 14px 20px;
+    background: var(--surface2);
+    border-left: 4px solid var(--blue-light);
+    border-radius: 0 12px 12px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 24px 0 12px;
+    letter-spacing: 0.03em;
+  }
+
   p { color: var(--text); margin-bottom: 14px; font-size: 15px; }
-  .card { background: var(--surface2); border: 1px solid var(--border); border-radius: 14px; padding: 20px 24px; margin: 14px 0; }
+
+  .card {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin: 14px 0;
+  }
+
   .card-blue  { border-color: rgba(59,130,246,0.25); background: rgba(59,130,246,0.06); }
   .card-green { border-color: rgba(16,185,129,0.25); background: rgba(16,185,129,0.06); }
   .card-amber { border-color: rgba(245,158,11,0.25); background: rgba(245,158,11,0.06); }
-  .card-red   { border-color: rgba(239,68,68,0.25);  background: rgba(239,68,68,0.06);  }
+  .card-purple { border-color: rgba(139,92,246,0.25); background: rgba(139,92,246,0.06); }
+  .card-pink { border-color: rgba(236,72,153,0.25); background: rgba(236,72,153,0.06); }
+  .card-red { border-color: rgba(239,68,68,0.25); background: rgba(239,68,68,0.06); }
+
+  .card strong { color: var(--blue-light); }
+  .card-green strong { color: var(--green); }
+  .card-amber strong { color: var(--gold); }
+  .card-purple strong { color: #a78bfa; }
+  .card-pink strong { color: #f472b6; }
+  .card-red strong { color: #fc8181; }
+
   ul { list-style: none; padding: 0; margin: 0; }
-  ul li { padding: 9px 0 9px 28px; position: relative; color: var(--text); font-size: 15px; border-bottom: 1px solid var(--border); }
+
+  ul li {
+    padding: 9px 0 9px 28px;
+    position: relative;
+    color: var(--text);
+    font-size: 15px;
+    border-bottom: 1px solid var(--border);
+  }
+
   ul li:last-child { border-bottom: none; }
-  ul li::before { content: '›'; position: absolute; left: 8px; color: var(--blue-light); font-weight: 700; font-size: 18px; top: 7px; }
+
+  ul li::before {
+    content: '›';
+    position: absolute;
+    left: 8px;
+    color: var(--blue-light);
+    font-weight: 700;
+    font-size: 18px;
+    top: 7px;
+  }
+
+  ul li strong { color: #fff; }
+
   .table-wrap { overflow-x: auto; border-radius: 14px; margin: 16px 0; }
+
   table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
   thead tr { background: var(--blue); color: #fff; }
-  thead th { padding: 12px 16px; text-align: left; font-weight: 600; }
+  thead th { padding: 12px 16px; text-align: left; font-weight: 600; letter-spacing: 0.04em; }
   tbody tr { background: var(--surface2); border-bottom: 1px solid var(--border); }
-  tbody tr:hover { background: rgba(59,130,246,0.08); }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: rgba(59,130,246,0.08); transition: background 0.2s; }
   tbody td { padding: 11px 16px; color: var(--text); }
   tbody td:first-child { color: #fff; font-weight: 500; }
-  .contact-box { background: var(--surface2); border: 1px solid var(--border); border-radius: 18px; padding: 32px; text-align: center; margin-top: 16px; }
-  .contact-row { display: flex; justify-content: center; align-items: center; gap: 10px; margin: 10px 0; font-size: 15px; color: var(--text); }
+
+  .perm-grid { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }
+
+  .chip {
+    display: inline-flex; align-items: center; gap: 5px;
+    background: rgba(26,86,219,0.15); border: 1px solid rgba(26,86,219,0.3);
+    border-radius: 100px; padding: 5px 14px; font-size: 12.5px;
+    font-weight: 500; color: var(--blue-light);
+  }
+
+  .chip.optional {
+    background: rgba(245,158,11,0.1); border-color: rgba(245,158,11,0.3); color: var(--gold);
+  }
+
+  .chip.safe {
+    background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.3); color: var(--green);
+  }
+
+  .chip.alarm {
+    background: rgba(239,68,68,0.1); border-color: rgba(239,68,68,0.3); color: #fc8181;
+  }
+
+  .not-collected { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }
+
+  .nc-chip {
+    display: inline-flex; align-items: center; gap: 5px;
+    background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.2);
+    border-radius: 100px; padding: 5px 14px; font-size: 12.5px; color: #fc8181;
+  }
+
+  .contact-box {
+    background: var(--surface2); border: 1px solid var(--border);
+    border-radius: 18px; padding: 32px; text-align: center; margin-top: 16px;
+  }
+
+  .contact-box a { color: var(--accent); text-decoration: none; font-weight: 500; }
+  .contact-box a:hover { text-decoration: underline; }
+
+  .contact-row {
+    display: flex; justify-content: center; align-items: center;
+    gap: 10px; margin: 10px 0; font-size: 15px; color: var(--text);
+  }
+
   .contact-row strong { color: var(--muted); font-weight: 500; min-width: 130px; text-align: right; }
-  .footer { text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid var(--border); color: var(--muted); font-size: 13.5px; line-height: 2; }
+
+  .summary-table tbody td:last-child { color: var(--muted); }
+  .check { color: var(--green); font-size: 16px; }
+
+  .footer {
+    text-align: center; margin-top: 60px; padding-top: 30px;
+    border-top: 1px solid var(--border); color: var(--muted);
+    font-size: 13.5px; line-height: 2;
+  }
+
+  .footer strong { color: var(--text); }
   .footer a { color: var(--accent); }
+
   .hl { color: var(--accent); font-weight: 600; }
+  .hl-green { color: var(--green); font-weight: 600; }
+  .hl-gold { color: var(--gold); font-weight: 600; }
+  .hl-red { color: #fc8181; font-weight: 600; }
+
+  .version-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.3);
+    border-radius: 100px; padding: 4px 12px; font-size: 12px;
+    font-weight: 600; color: #a78bfa; margin-left: 10px; vertical-align: middle;
+  }
+
+  .new-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(236,72,153,0.15); border: 1px solid rgba(236,72,153,0.3);
+    border-radius: 100px; padding: 4px 12px; font-size: 12px;
+    font-weight: 600; color: #f472b6; margin-left: 10px; vertical-align: middle;
+  }
+
+  .alarm-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(239,68,68,0.15); border: 1px solid rgba(239,68,68,0.3);
+    border-radius: 100px; padding: 4px 12px; font-size: 12px;
+    font-weight: 600; color: #fc8181; margin-left: 10px; vertical-align: middle;
+  }
+
+  code {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 2px 8px;
+    font-family: monospace;
+    font-size: 13px;
+    color: var(--accent);
+  }
+
   @media (max-width: 600px) {
     .wrapper { padding: 36px 16px 60px; }
     h2 { font-size: 1.2rem; }
+    .meta-row { gap: 14px; }
     .contact-row { flex-direction: column; gap: 4px; }
     .contact-row strong { text-align: center; min-width: unset; }
   }
@@ -79,79 +303,391 @@
 <body>
 <div class="wrapper">
 
+  <!-- HEADER -->
   <div class="header">
-    <div class="logo-badge"><span>📜</span> Legally Binding Agreement</div>
-    <h1>HabitNode<br/><em>Terms & Conditions</em></h1>
+    <div class="logo-badge"><span>🔒</span> Official Legal Document</div>
+    <h1>HabitNode<br/><em>Privacy Policy</em></h1>
     <div class="meta-row">
       <span>📅 <strong>Effective Date:</strong> June 5, 2026</span>
+      <span>🔄 <strong>Last Updated:</strong> June 2026</span>
       <span>🏢 <strong>Developer:</strong> VHIR Tech</span>
       <span>📦 <strong>Package:</strong> com.habit.node</span>
-      <span>🔢 <strong>Version:</strong> 1.0.4</span>
+      <span>🔢 <strong>Version:</strong> 1.0.5</span>
       <span>🌍 <strong>Scope:</strong> Global</span>
     </div>
   </div>
 
-  <div style="background: linear-gradient(135deg, rgba(26,86,219,0.1), rgba(34,211,238,0.06)); border: 1px solid rgba(26,86,219,0.25); border-radius: 16px; padding: 24px 28px; margin-bottom: 50px;">
-    <p>Welcome to <strong>HabitNode</strong> by <strong>VHIR Tech</strong>. By downloading, accessing, installing, or using the HabitNode application, you agree to be legally bound by these Terms and Conditions and our <a href="https://vhir-apps.github.io/habit-node-privacy_policy/">Privacy Policy</a>. If you do not agree, please discontinue use immediately.</p>
+  <!-- INTRO CALLOUT -->
+  <div class="callout">
+    <div class="callout-icon">🛡️</div>
+    <div>
+      <p><strong>Privacy-First Design:</strong> HabitNode stores the majority of your data locally on your device using an encrypted Hive database. Cloud features — including the Global Leaderboard, Google Drive Backup, Social Chat, Profile Likes, and Public Profile — are entirely optional and require your explicit consent before activation. Alarms and notifications operate locally on your device and never transmit data to our servers. You remain in full control of your data at all times.</p>
+      <p style="margin-top:10px; margin-bottom:0;">By downloading, installing, or using HabitNode, you agree to this Privacy Policy and our <a href="https://vhir-apps.github.io/habit-node-terms_and_conditions/">Terms & Conditions</a>. If you do not agree, please discontinue use of the App immediately.</p>
+    </div>
   </div>
 
-  <h2>1. Acceptance of Terms</h2>
-  <p>These Terms constitute a legally binding agreement between you and VHIR Tech governing your use of HabitNode (Version 1.0.4). By using the App, you confirm you are at least 13 years of age. These Terms incorporate our <a href="https://vhir-apps.github.io/habit-node-privacy_policy/">Privacy Policy</a> by reference.</p>
+  <!-- SECTION 1 -->
+  <h2>1. Information We Collect</h2>
 
-  <h2>2. License to Use</h2>
-  <p>VHIR Tech grants you a personal, non-exclusive, non-transferable, revocable, limited license to use HabitNode for personal, non-commercial productivity purposes. You may not copy, modify, reverse-engineer, decompile, or create derivative works.</p>
+  <h3>1.1 Data Stored Locally on Your Device</h3>
+  <p>The following data is stored exclusively on your device using the Hive encrypted local database and is never transmitted to our servers unless you explicitly enable a cloud feature:</p>
+  <ul>
+    <li><strong>Profile Information:</strong> Display name, avatar emoji, tagline, bio, country code (all optional)</li>
+    <li><strong>Habit &amp; Routine Data:</strong> Habit names, descriptions, categories, schedules, goals, priorities, notes, completion records, study targets, and progress logs</li>
+    <li><strong>Study Sessions:</strong> Pomodoro timer data, study routine schedules, session history, subject targets, and daily study time records</li>
+    <li><strong>Personal Notes:</strong> Note titles, content, tags, and timestamps</li>
+    <li><strong>Missed Habit Reflections:</strong> Optional reasons provided when skipping a habit — used locally for smart reminders only</li>
+    <li><strong>Achievement Data:</strong> Badges earned, XP points, level progress, streaks, and trophy cabinet</li>
+    <li><strong>App Preferences:</strong> Theme mode, notification settings, sound settings, alarm configurations, and privacy toggles</li>
+    <li><strong>Alarm Configurations:</strong> Alarm times, custom alarm sounds, snooze preferences, vibration settings — all stored locally and never transmitted</li>
+    <li><strong>Study Analytics:</strong> Daily, weekly, and all-time study minutes — stored locally for statistics display</li>
+    <li><strong>Blocked Users List:</strong> UIDs of users you have blocked — stored locally only, never sent to any server</li>
+    <li><strong>Liked Profiles Cache:</strong> Local reference to profiles you have liked — used to display your "You Liked" tab on the Leaderboard screen without repeated network calls</li>
+  </ul>
 
-  <h2>3. User Accounts & Google Sign-In</h2>
-  <p>Cloud features require Google Sign-In via Firebase Authentication. You are responsible for all activity under your account. For data handling details, see our <a href="https://vhir-apps.github.io/habit-node-privacy_policy/">Privacy Policy</a>.</p>
+  <h3>1.2 Data Stored in the Cloud (Optional &amp; User-Initiated)</h3>
 
-  <h2>4. Community Guidelines</h2>
-  <p>You agree not to post abusive, harassing, threatening, defamatory, obscene, discriminatory, or spam content. You will not impersonate others, manipulate the leaderboard, or use the App for unlawful purposes.</p>
+  <div class="card card-blue">
+    <p><strong>📊 Global Leaderboard &amp; Public Profile (Opt-In Required)</strong>
+    <span class="new-badge">v1.0.5</span></p>
+    <p>If you voluntarily join the global leaderboard, the following data is stored in Google Cloud Firestore:</p>
+    <ul style="margin: 8px 0 12px 0;">
+      <li><strong>Display name, avatar emoji, tagline, bio, country code</strong> (all editable by you)</li>
+      <li><strong>Unique UID</strong> — your Firebase Authentication UID</li>
+      <li><strong>XP score, level, study hours, badges unlocked count</strong></li>
+      <li><strong>Daily score, weekly score</strong></li>
+      <li><strong>Posts</strong> you share on the Social Feed</li>
+      <li><strong>Privacy settings:</strong> showLevel, showBadges, showStudyHours toggles</li>
+      <li><strong>Pro status</strong> (boolean — not payment details)</li>
+      <li><strong>Last active timestamp</strong></li>
+      <li><strong>Like count:</strong> Total number of likes received on your profile (integer only — not individual liker identities in the main document)</li>
+    </ul>
+    <p>Your <strong>Privacy Controls:</strong> You may toggle visibility of your level, badges, and study hours independently. You may opt out or permanently delete your cloud profile at any time via <span class="hl">Settings → Leaderboard → Opt Out or Delete Profile</span>.</p>
+    <p>The Leaderboard screen includes three tabs: <strong>Weekly</strong>, <strong>All Time</strong>, and <strong>You Liked</strong> (showing profiles you have liked).</p>
+    <p style="margin-bottom:0;">⚠️ <strong>What other users can see:</strong> Only your display name, avatar, tagline, bio, country code, XP, level (if enabled), badges (if enabled), study time (if enabled), social posts, and total like count. Your email address is never shown to other users. Use of leaderboard features is governed by our <a href="https://vhir-apps.github.io/habit-node-terms_and_conditions/">Terms & Conditions</a>.</p>
+  </div>
 
-  <h2>5. Content Moderation</h2>
-  <div class="card card-amber"><p><strong>⚠️ Content Removal:</strong> We may remove content violating these Terms at our sole discretion.</p></div>
-  <div class="card card-amber"><p><strong>⚠️ Account Suspension:</strong> Accounts may be suspended or terminated for violations. Cloud data may be deleted per our <a href="https://vhir-apps.github.io/habit-node-privacy_policy/">Privacy Policy</a>.</p></div>
-  <div class="card card-green"><p><strong>✅ Appeal Process:</strong> Contact <span class="hl">vhirsupport@gmail.com</span> with subject "Account Appeal — HabitNode". Review within 7 business days.</p></div>
+  <!-- PROFILE LIKE SYSTEM -->
+  <div class="card card-pink">
+    <p><strong>❤️ Profile Like System (Opt-In — Leaderboard Required)</strong>
+    <span class="new-badge">v1.0.5</span></p>
+    <p>HabitNode includes a Profile Like feature that allows users to show appreciation for other users' public profiles. When you use this feature:</p>
+    <ul style="margin: 8px 0 12px 0;">
+      <li><strong>What is stored in Firestore:</strong> When you like a profile, your UID and a server-generated timestamp are stored in a <code>likes</code> subcollection under that user's Firestore document</li>
+      <li><strong>What the profile owner sees:</strong> Total like count on their profile, and a list of users who liked them (showing display name and avatar, fetched from their public profile)</li>
+      <li><strong>What other users see:</strong> Only the total like count — not who liked the profile</li>
+      <li><strong>"You Liked" Tab:</strong> On the <strong>Leaderboard screen</strong> (alongside Weekly and All Time tabs), you can view all profiles you have liked. This list is fetched from Firestore and cached locally for performance</li>
+      <li><strong>Unlike:</strong> You may remove your like at any time by tapping the like button again — your UID and timestamp are immediately and permanently deleted from Firestore</li>
+      <li><strong>Self-like prevention:</strong> You cannot like your own profile — enforced both in-app and at the Firestore rules level</li>
+    </ul>
+    <p><strong>Data stored per like record in Firestore:</strong></p>
+    <ul style="margin: 8px 0 12px 0;">
+      <li><code>likerUid</code> — your Firebase UID</li>
+      <li><code>likedAt</code> — server timestamp of when the like was created</li>
+    </ul>
+    <p><strong>Deletion:</strong> If you delete your cloud profile, all like records associated with your UID as the liker are removed. If the liked profile is deleted, the entire likes subcollection is removed automatically.</p>
+    <p style="margin-bottom:0;">🔒 Like data is never shared with advertisers, third parties, or used for profiling purposes. It exists solely to enable the social appreciation feature within HabitNode.</p>
+  </div>
 
-  <h2>6. In-App Purchases</h2>
-  <p>Pro subscription processed via <strong>Google Play Billing</strong>. Auto-renews unless cancelled 24 hours before renewal. Refunds within 48 hours via Google Play.</p>
+  <div class="card card-blue">
+    <p><strong>☁️ Google Drive Auto-Backup (User-Initiated)</strong></p>
+    <p>When you enable Google Drive backup, your data is encrypted and uploaded to your private Google Drive <code>appDataFolder</code>. This folder is invisible to other apps and accessible only by you and HabitNode.</p>
+    <p><strong>Data covered by backup:</strong> All habits, routines, study sessions, study targets, leaderboard profile (local copy), personal notes, app settings, preferences, alarm configurations, and notification history.</p>
+    <p><strong>Auto-Restore on Sign-In:</strong> When you sign in with Google on a new device or after reinstalling, HabitNode automatically checks for an existing Google Drive backup and restores your data silently in the background.</p>
+    <p><strong>Backup Frequency Options:</strong> Every change (with debounce), daily, weekly, or on app exit. Works on both WiFi and mobile data. An offline pending queue ensures no data loss when connectivity is unavailable.</p>
+    <p style="margin-bottom:0;"><strong>Chat messages and profile likes are NOT included in Google Drive backup</strong> — they are stored in Firestore and managed separately.</p>
+  </div>
 
-  <h2>7. Advertisements</h2>
-  <p>Free version displays ads via Google AdMob and Unity Ads. Pro subscribers enjoy ad-free experience. For ad data handling, see our <a href="https://vhir-apps.github.io/habit-node-privacy_policy/">Privacy Policy</a>.</p>
+  <div class="card card-blue">
+    <p><strong>💬 Social Chat &amp; Direct Messaging (Optional — Account Required)</strong></p>
+    <p>HabitNode includes a built-in real-time direct messaging system. Messages are transmitted over HTTPS/TLS encrypted channels and stored in Google Cloud Firestore. Free users have a daily message limit (20 messages/day); Pro users have unlimited messaging.</p>
+    <p><strong>Your controls:</strong> Delete individual messages (Unsend) · Clear entire chat history · Block users · Report users</p>
+    <p style="margin-bottom:0;">🔒 Chat usage is subject to our <a href="https://vhir-apps.github.io/habit-node-terms_and_conditions/">Terms & Conditions</a>.</p>
+  </div>
 
-  <h2>8. Limitation of Liability</h2>
-  <p>HabitNode is provided "AS IS" without warranties. VHIR Tech is not liable for indirect, incidental, or consequential damages including data loss.</p>
+  <div class="card card-blue">
+    <p><strong>📢 Social Feed &amp; Posts (Optional)</strong></p>
+    <p>If you choose to share a post on the Social Feed (maximum 500 words per post), your author UID, display name, avatar emoji, XP score, post text, and timestamps are stored publicly in Firestore.</p>
+  </div>
 
-  <h2>9. Intellectual Property</h2>
-  <p>All content, design, UI/UX, source code, and HabitNode branding are exclusive property of VHIR Tech.</p>
+  <!-- 🚀 NEW SECTION: ALARM & LOCK SCREEN FEATURES -->
+  <h2>2. Alarm &amp; Lock Screen Features <span class="alarm-badge">v1.0.5</span></h2>
 
-  <h2>10. Privacy</h2>
-  <p>Your use is governed by our <a href="https://vhir-apps.github.io/habit-node-privacy_policy/">Privacy Policy</a>, incorporated by reference.</p>
+  <div class="card card-red">
+    <p><strong>🔔 Professional Lock-Screen Alarm System</strong></p>
+    <p>HabitNode includes a professional-grade alarm system designed to reliably wake you up and remind you of your habits, similar to standard alarm clock apps. This section explains how it works and what data it handles.</p>
+  </div>
 
-  <h2>11. Termination</h2>
-  <p>You may stop using HabitNode by uninstalling. We may terminate access for violations. Cloud data may be deleted per our <a href="https://vhir-apps.github.io/habit-node-privacy_policy/">Privacy Policy</a>.</p>
+  <h3>2.1 What the Alarm System Does</h3>
+  <ul>
+    <li><strong>Lock Screen Display:</strong> When an alarm fires, HabitNode displays a full-screen alarm interface directly over your lock screen — no unlock required</li>
+    <li><strong>Screen Wake-Up:</strong> The alarm automatically turns on your device screen, even if it was off</li>
+    <li><strong>Loud Sound Playback:</strong> Alarm sounds play through the alarm audio stream (not media), bypassing silent mode when applicable</li>
+    <li><strong>Vibration:</strong> Device vibrates during alarm (if vibration is enabled in settings)</li>
+    <li><strong>Snooze &amp; Dismiss:</strong> Two action buttons — "Stop Alarm" (marks habit as done) and "Snooze 5 minutes"</li>
+    <li><strong>Background Reliability:</strong> Alarms fire even when the app is closed, the device is locked, or in battery-saving mode</li>
+    <li><strong>Boot Persistence:</strong> Alarms automatically re-schedule themselves after device reboot</li>
+  </ul>
 
-  <h2>12. Governing Law</h2>
-  <p>Governed by laws of India (IT Act 2000). EU/UK consumer protections apply additionally. Disputes: contact <span class="hl">vhirsupport@gmail.com</span> first, then Indian courts.</p>
+  <h3>2.2 Security Lockdown During Alarm <span class="alarm-badge">Important</span></h3>
+  <div class="card card-amber">
+    <p><strong>⚠️ Alarm Screen Lockdown:</strong> When an alarm is actively ringing on your locked device, the alarm interface is the <strong>only</strong> accessible screen. This is an intentional security design to prevent unauthorized access to your app data while your device remains locked.</p>
+    <p style="margin-top:10px;"><strong>What this means:</strong></p>
+    <ul style="margin-top:8px;">
+      <li>The Back button is disabled during alarm</li>
+      <li>Home gesture/button cannot dismiss the alarm — only the in-app Stop or Snooze buttons can</li>
+      <li>System UI (status bar, navigation) is hidden during alarm</li>
+      <li>If you attempt to exit, the alarm screen automatically reappears</li>
+      <li>Screenshots and screen recording are disabled on the alarm screen (FLAG_SECURE)</li>
+      <li>Once you press <strong>Stop Alarm</strong> or <strong>Snooze</strong>, you are returned to your device's lock screen (the app remains locked behind it)</li>
+    </ul>
+    <p style="margin-top:10px; margin-bottom:0;">🔒 This ensures that even if someone steals your device while an alarm is ringing, they cannot access your habit data, notes, or any other content.</p>
+  </div>
 
-  <h2>13. Changes to Terms</h2>
-  <p>We may modify these Terms. Significant changes notified via in-app notification. Continued use = acceptance. Review periodically along with our <a href="https://vhir-apps.github.io/habit-node-privacy_policy/">Privacy Policy</a>.</p>
+  <h3>2.3 What Data the Alarm System Collects</h3>
+  <div class="card card-green">
+    <p><strong>✅ Zero Data Collection from Alarms</strong></p>
+    <p>The alarm system operates 100% locally on your device. We collect <strong>no data</strong> from alarm operations:</p>
+    <ul style="margin: 8px 0 0 0;">
+      <li>❌ No audio is recorded</li>
+      <li>❌ No microphone is accessed</li>
+      <li>❌ Snooze/dismiss actions are not tracked on our servers</li>
+      <li>❌ Alarm trigger times are not sent to any server</li>
+      <li>❌ No usage statistics are gathered</li>
+      <li>✅ Alarm configurations are stored only on your device (included in optional Google Drive backup if enabled)</li>
+    </ul>
+  </div>
 
-  <h2>14. Contact Us</h2>
+  <h3>2.4 Background Service for Alarms</h3>
+  <p>To ensure reliable alarm sound playback, HabitNode runs a brief foreground service when an alarm fires. This service:</p>
+  <ul>
+    <li>Starts <strong>only</strong> when an alarm is triggered at the user-scheduled time</li>
+    <li>Plays the alarm sound through the device's alarm audio stream</li>
+    <li>Stops <strong>automatically</strong> when you press Stop or Snooze</li>
+    <li>Does <strong>not</strong> collect, transmit, or store any data</li>
+    <li>Does <strong>not</strong> run continuously in the background</li>
+  </ul>
+
+  <h3>2.5 User Control Over Alarms</h3>
+  <p>You have full control over the alarm system. You can:</p>
+  <ul>
+    <li><strong>Disable per-habit:</strong> Turn off alarms for individual habits in habit settings</li>
+    <li><strong>Disable globally:</strong> Turn off all alarms via App Settings → Notifications</li>
+    <li><strong>Revoke system permissions:</strong> Go to Android Settings → Apps → HabitNode → Permissions → Disable "Alarms &amp; Reminders" and "Display over other apps"</li>
+    <li><strong>Customize sounds:</strong> Use default alarm sound or select a custom sound from your device</li>
+    <li><strong>Customize snooze duration:</strong> Default is 5 minutes (adjustable in settings)</li>
+  </ul>
+
+  <h3>2.6 Alarm Liability Disclaimer</h3>
+  <div class="card card-amber">
+    <p><strong>⚠️ Not for Critical/Safety Use:</strong> While HabitNode employs industry-standard mechanisms (full-screen intents, exact alarms, wake locks, foreground service) for reliable alarm delivery, alarm functionality may be affected by:</p>
+    <ul style="margin: 8px 0 12px 0;">
+      <li>Device-specific battery optimization (especially on Xiaomi/MIUI, Huawei/EMUI, Samsung/OneUI, Oppo, Vivo, Realme)</li>
+      <li>Manufacturer-customized power management</li>
+      <li>Do Not Disturb mode</li>
+      <li>Airplane mode or device shutdown</li>
+      <li>Operating system updates or restrictions</li>
+      <li>Insufficient device storage or RAM</li>
+    </ul>
+    <p style="margin-bottom:0;"><strong>You acknowledge that HabitNode alarms should not be solely relied upon for critical, life-safety, medical, or emergency purposes.</strong> For guaranteed alarm delivery, we recommend whitelisting HabitNode from battery optimization in your device settings. VHIR Tech is not liable for missed alarms or any consequences thereof.</p>
+  </div>
+
+  <h2>3. Connectivity-Based Behavior</h2>
+  <div class="card card-green">
+    <p><strong>📵 Offline-First Architecture</strong></p>
+    <p>HabitNode is designed to work fully offline. All habit tracking, study timer, notes, alarms, notifications, and local analytics work without any network connection. Cloud features are gracefully disabled when offline — no data loss occurs. Cached leaderboard data and "You Liked" tab profiles display from local cache. When connectivity returns, cloud operations resume automatically.</p>
+  </div>
+
+  <h2>4. Account Information (Google Sign-In)</h2>
+  <p>When you sign in with Google, we receive your Google email address, display name, profile photo URL, and unique Firebase Authentication UID. This data is used solely for authentication and cloud feature access. By signing in, you agree to our <a href="https://vhir-apps.github.io/habit-node-terms_and_conditions/">Terms & Conditions</a>.</p>
+
+  <h2>5. Unique User Identifier (UID) System</h2>
+  <div class="card card-purple">
+    <p><strong>🆔 About Your UID</strong></p>
+    <p>Every HabitNode user who signs in receives a unique identifier (UID) generated by Firebase Authentication. This UID is visible on your profile, used for player search, stored in leaderboard and like records, and cannot be changed. It is <strong>not</strong> your email address.</p>
+  </div>
+
+  <h2>6. Android Permissions We Use <span class="alarm-badge">v1.0.5</span></h2>
+  <p>HabitNode requires the following Android permissions to deliver its features. Each permission is used solely for its stated purpose:</p>
+
+  <h3>6.1 Core Permissions</h3>
+  <div class="perm-grid">
+    <span class="chip">INTERNET</span>
+    <span class="chip">ACCESS_NETWORK_STATE</span>
+    <span class="chip">POST_NOTIFICATIONS</span>
+    <span class="chip">VIBRATE</span>
+    <span class="chip">RECEIVE_BOOT_COMPLETED</span>
+  </div>
+
+  <h3>6.2 Alarm &amp; Lock Screen Permissions <span class="alarm-badge">New</span></h3>
+  <div class="perm-grid">
+    <span class="chip alarm">SCHEDULE_EXACT_ALARM</span>
+    <span class="chip alarm">USE_EXACT_ALARM</span>
+    <span class="chip alarm">USE_FULL_SCREEN_INTENT</span>
+    <span class="chip alarm">WAKE_LOCK</span>
+    <span class="chip alarm">DISABLE_KEYGUARD</span>
+    <span class="chip alarm">TURN_SCREEN_ON</span>
+    <span class="chip alarm">FOREGROUND_SERVICE</span>
+    <span class="chip alarm">FOREGROUND_SERVICE_MEDIA_PLAYBACK</span>
+  </div>
+
+  <h3>6.3 Storage &amp; Media Permissions</h3>
+  <div class="perm-grid">
+    <span class="chip optional">READ_EXTERNAL_STORAGE (≤ Android 12)</span>
+    <span class="chip optional">WRITE_EXTERNAL_STORAGE (≤ Android 10)</span>
+    <span class="chip optional">READ_MEDIA_IMAGES</span>
+    <span class="chip optional">READ_MEDIA_AUDIO</span>
+    <span class="chip optional">READ_MEDIA_VIDEO</span>
+  </div>
+
+  <h3>6.4 Detailed Permission Usage</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Permission</th><th>Purpose</th><th>Required?</th></tr></thead>
+      <tbody>
+        <tr><td>SCHEDULE_EXACT_ALARM</td><td>Fire habit alarms at the exact user-scheduled time</td><td>Yes (alarms)</td></tr>
+        <tr><td>USE_EXACT_ALARM</td><td>Alternative exact alarm mechanism for newer Android versions</td><td>Yes (alarms)</td></tr>
+        <tr><td>USE_FULL_SCREEN_INTENT</td><td>Display full-screen alarm UI over the lock screen</td><td>Yes (alarms)</td></tr>
+        <tr><td>WAKE_LOCK</td><td>Keep CPU/screen awake during active alarm</td><td>Yes (alarms)</td></tr>
+        <tr><td>DISABLE_KEYGUARD</td><td>Allow alarm display without unlocking device</td><td>Yes (alarms)</td></tr>
+        <tr><td>TURN_SCREEN_ON</td><td>Wake the device screen when alarm fires</td><td>Yes (alarms)</td></tr>
+        <tr><td>FOREGROUND_SERVICE</td><td>Run brief service for alarm sound playback</td><td>Yes (alarms)</td></tr>
+        <tr><td>FOREGROUND_SERVICE_MEDIA_PLAYBACK</td><td>Type declaration for alarm sound foreground service</td><td>Yes (alarms)</td></tr>
+        <tr><td>POST_NOTIFICATIONS</td><td>Send habit reminders, alarms, and chat notifications</td><td>Yes</td></tr>
+        <tr><td>VIBRATE</td><td>Vibration for alarms and notifications</td><td>Yes</td></tr>
+        <tr><td>RECEIVE_BOOT_COMPLETED</td><td>Re-schedule alarms after device restart</td><td>Yes</td></tr>
+        <tr><td>INTERNET / NETWORK_STATE</td><td>Cloud sync, chat, leaderboard, ads</td><td>Yes (cloud)</td></tr>
+        <tr><td>READ_MEDIA_AUDIO</td><td>Pick custom alarm sound from device</td><td>Optional</td></tr>
+        <tr><td>READ_MEDIA_IMAGES / VIDEO</td><td>Attach media to notes (future feature)</td><td>Optional</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>7. Third-Party Services Used</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Service</th><th>Provider</th><th>Purpose</th><th>Data Sent</th></tr></thead>
+      <tbody>
+        <tr><td>Google AdMob</td><td>Google LLC</td><td>Banner advertisements</td><td>Anonymous ad identifiers</td></tr>
+        <tr><td>Unity Ads</td><td>Unity Technologies</td><td>Interstitial &amp; rewarded ads</td><td>Anonymous ad identifiers</td></tr>
+        <tr><td>Firebase Authentication</td><td>Google LLC</td><td>Secure Google Sign-In</td><td>Email, UID, display name</td></tr>
+        <tr><td>Cloud Firestore</td><td>Google LLC</td><td>Leaderboard, chat, social feed, profile likes</td><td>Display name, XP, messages, posts, like records</td></tr>
+        <tr><td>Google Drive API</td><td>Google LLC</td><td>Auto-backup &amp; restore</td><td>Encrypted habit data (appDataFolder)</td></tr>
+        <tr><td>Firebase Cloud Messaging</td><td>Google LLC</td><td>Habit alarm &amp; reminder notifications</td><td>FCM device token</td></tr>
+        <tr><td>Google Play Billing</td><td>Google LLC</td><td>Pro subscription</td><td>Transaction data only</td></tr>
+        <tr><td>Flutter Local Notifications</td><td>Open-source SDK</td><td>Local alarms &amp; reminders (on-device only)</td><td>None — runs locally</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>8. Data We Do NOT Collect</h2>
+  <div class="not-collected">
+    <span class="nc-chip">❌ Phone Number</span>
+    <span class="nc-chip">❌ Precise Location / GPS</span>
+    <span class="nc-chip">❌ Camera / Microphone</span>
+    <span class="nc-chip">❌ Contacts / Address Book</span>
+    <span class="nc-chip">❌ Call Logs or SMS</span>
+    <span class="nc-chip">❌ Browsing History</span>
+    <span class="nc-chip">❌ Biometric Data</span>
+    <span class="nc-chip">❌ Payment Card Details</span>
+    <span class="nc-chip">❌ Health / Fitness Data</span>
+    <span class="nc-chip">❌ Device IMEI</span>
+    <span class="nc-chip">❌ Bluetooth Identifiers</span>
+    <span class="nc-chip">❌ Keystrokes / Clipboard</span>
+    <span class="nc-chip">❌ Screen Recording</span>
+    <span class="nc-chip">❌ Crash Diagnostics (no crash reporting SDK)</span>
+    <span class="nc-chip">❌ Alarm Trigger Analytics</span>
+    <span class="nc-chip">❌ Snooze / Dismiss Patterns</span>
+  </div>
+
+  <h2>9. How We Use Your Information</h2>
+  <ul>
+    <li><strong>Local Habit Tracking:</strong> All on-device — habit creation, completion, smart reminders, streaks, XP</li>
+    <li><strong>Professional Alarm System:</strong> Lock-screen alarms, sound playback, snooze/dismiss — all on-device</li>
+    <li><strong>Study Mode:</strong> Pomodoro timer, study routines, TTS voice coach — all on-device</li>
+    <li><strong>AI Psychology Notifications:</strong> Behavioral science-based motivational notifications — processed locally</li>
+    <li><strong>Cloud Leaderboard:</strong> Weekly, All Time, and You Liked tabs; public profiles with Stats, Badges, Posts, Activity</li>
+    <li><strong>Profile Like System:</strong> Appreciation feature with "You Liked" tab on Leaderboard screen</li>
+    <li><strong>Direct Chat:</strong> Real-time peer-to-peer messaging with local notifications</li>
+    <li><strong>Social Feed:</strong> Progress updates (max 500 words)</li>
+    <li><strong>Player Search:</strong> Find users by UID or display name</li>
+    <li><strong>Google Drive Backup:</strong> Encrypted auto-backup with auto-restore</li>
+    <li><strong>Offline-First:</strong> Full functionality without internet</li>
+    <li><strong>Advertising:</strong> Banner and interstitial ads (free users only)</li>
+    <li><strong>Authentication:</strong> Firebase Google Sign-In</li>
+    <li><strong>In-App Purchases:</strong> Google Play Billing for Pro subscription</li>
+  </ul>
+
+  <h2>10. Data Retention &amp; Deletion</h2>
+  <ul>
+    <li><strong>Local Data:</strong> Stored on your device until you uninstall the app or manually delete it from settings</li>
+    <li><strong>Cloud Profile:</strong> Stored in Firestore until you opt out or delete your profile</li>
+    <li><strong>Chat Messages:</strong> Stored in Firestore until you delete them or clear chat history</li>
+    <li><strong>Profile Likes:</strong> Stored until you unlike a profile or the profile is deleted</li>
+    <li><strong>Google Drive Backup:</strong> Stored in your Google Drive until you delete it manually or revoke Drive permissions</li>
+    <li><strong>Account Data:</strong> Deletion requests handled within 7 business days via <span class="hl">vhirsupport@gmail.com</span></li>
+  </ul>
+
+  <h2>11. Children's Privacy</h2>
+  <p>HabitNode is not intended for children under 13. We do not knowingly collect data from children under 13. If we learn that we have collected such data, we will delete it immediately. Parents/guardians may contact us at <span class="hl">vhirsupport@gmail.com</span> for any concerns.</p>
+
+  <h2>12. International Data Transfers</h2>
+  <p>Cloud data is processed by Google Cloud Platform, which may store data in various regions. By using cloud features, you consent to international data transfer in accordance with Google's privacy policies.</p>
+
+  <h2>13. Your Rights (GDPR / CCPA Compliance)</h2>
+  <ul>
+    <li><strong>Right to Access:</strong> Request a copy of your data</li>
+    <li><strong>Right to Rectification:</strong> Update inaccurate data</li>
+    <li><strong>Right to Erasure:</strong> Request permanent data deletion</li>
+    <li><strong>Right to Portability:</strong> Export your data via Google Drive backup</li>
+    <li><strong>Right to Object:</strong> Opt out of cloud features at any time</li>
+    <li><strong>Right to Withdraw Consent:</strong> Revoke permissions in device settings</li>
+  </ul>
+  <p>To exercise your rights, contact <span class="hl">vhirsupport@gmail.com</span>.</p>
+
+  <h2>14. Security Measures</h2>
+  <ul>
+    <li>🔒 Local data encrypted via Hive secure storage</li>
+    <li>🔒 All cloud transmissions over HTTPS/TLS</li>
+    <li>🔒 Firebase Authentication for secure sign-in</li>
+    <li>🔒 Google Drive backup uses private <code>appDataFolder</code></li>
+    <li>🔒 Firestore security rules enforce per-user data access</li>
+    <li>🔒 Alarm screen uses FLAG_SECURE to prevent screenshots</li>
+    <li>🔒 Lock screen alarm prevents unauthorized app access</li>
+  </ul>
+
+  <h2>15. Changes to This Privacy Policy</h2>
+  <p>We may update this Privacy Policy from time to time. Significant changes will be communicated via in-app notification or update notes. Continued use of the App after changes constitutes acceptance. Last updated: <strong>June 2026 (v1.0.5)</strong>.</p>
+
+  <h2>16. Compliance &amp; Legal Basis</h2>
+  <ul>
+    <li>🇪🇺 <strong>GDPR</strong> (European Union)</li>
+    <li>🇺🇸 <strong>CCPA</strong> (California, USA)</li>
+    <li>🇮🇳 <strong>DPDP Act 2023</strong> (India)</li>
+    <li>🇧🇷 <strong>LGPD</strong> (Brazil)</li>
+    <li>📱 <strong>Google Play Developer Policy</strong></li>
+    <li>🍎 <strong>Apple App Store Review Guidelines</strong> (if applicable)</li>
+  </ul>
+
+  <h2>17. Contact Us</h2>
   <div class="contact-box">
     <div style="font-size:2rem; margin-bottom:16px;">📬</div>
     <div class="contact-row"><strong>Developer</strong> VHIR Tech</div>
     <div class="contact-row"><strong>App Name</strong> HabitNode</div>
     <div class="contact-row"><strong>Package ID</strong> com.habit.node</div>
-    <div class="contact-row"><strong>Version</strong> 1.0.4</div>
+    <div class="contact-row"><strong>App Version</strong> 1.0.5</div>
     <div class="contact-row"><strong>Email</strong> <a href="mailto:vhirsupport@gmail.com">vhirsupport@gmail.com</a></div>
-    <div class="contact-row"><strong>Privacy Policy</strong> <a href="https://vhir-apps.github.io/habit-node-privacy_policy/">View Privacy Policy</a></div>
+    <div class="contact-row"><strong>Privacy Policy</strong> <a href="https://vhir-apps.github.io/habit-node-privacy_policy/">View Online</a></div>
+    <div class="contact-row"><strong>Terms & Conditions</strong> <a href="https://vhir-apps.github.io/habit-node-terms_and_conditions/">View Terms & Conditions</a></div>
+    <div class="contact-row"><strong>Support Languages</strong> English · বাংলা (Bengali)</div>
     <div class="contact-row"><strong>Response Time</strong> Within 7 business days</div>
   </div>
 
   <div class="footer">
     <p>© 2026 <strong>HabitNode by VHIR Tech</strong>. All rights reserved.</p>
-    <p>Terms effective as of <strong>June 5, 2026</strong> (Version 1.0.4).</p>
-    <p><a href="https://vhir-apps.github.io/habit-node-privacy_policy/">📄 Privacy Policy</a> · com.habit.node · v1.0.4</p>
+    <p>This Privacy Policy is effective as of <strong>June 5, 2026</strong> (Version 1.0.5).</p>
+    <p>Applies to all users of HabitNode worldwide.</p>
+    <p style="margin-top:8px;"><a href="https://vhir-apps.github.io/habit-node-terms_and_conditions/">📜 Terms & Conditions</a> · com.habit.node · v1.0.5 · Built with Flutter</p>
   </div>
 
 </div>
